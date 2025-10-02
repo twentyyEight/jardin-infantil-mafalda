@@ -1,0 +1,444 @@
+body {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Playpen Sans", cursive;
+    font-weight: 600;
+}
+
+h2 {
+    color: black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+body,
+h1,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 5px;
+    margin: 10px;
+}
+
+.menu-nav,
+ul {
+    background-color: white;
+    padding: 6px;
+    border-radius: 5px;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-nav {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    color: black;
+    gap: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.574);
+}
+
+.menu-nav img {
+    height: 25px;
+}
+
+ul {
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+ul.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+li {
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-align: end;
+}
+
+.que-ofrecemos-nav,
+.niveles-nav,
+.jornadas-nav {
+    margin-bottom: 5px;
+}
+
+.que-ofrecemos-nav {
+    background-color: #FF2A2A;
+}
+
+.que-ofrecemos-nav:hover {
+    background-color: #d00000;
+}
+
+.niveles-nav {
+    background-color: #ffc800;
+}
+
+.niveles-nav:hover {
+    background-color: #b08a01;
+}
+
+.jornadas-nav {
+    background-color: #49BB35;
+}
+
+.jornadas-nav:hover {
+    background-color: #307c22;
+}
+
+.contactanos-nav {
+    background-color: #1286E9;
+}
+
+.contactanos-nav:hover {
+    background-color: #0f5490;
+}
+
+li {
+    list-style-type: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 1;
+}
+
+.overlay.active {
+    display: block;
+}
+
+
+/* HERO */
+.hero {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5)),
+        url("assets/reja-jardin.jpg") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero img {
+    width: 200px;
+}
+
+.hero h1 {
+    font-size: 35px;
+    text-align: center;
+    line-height: 1;
+}
+
+.hero h3 {
+    font-family: "Playwrite US Modern", cursive;
+    font-weight: 300;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+/* QUÉ OFRECEMOS */
+.que-ofrecemos-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.educacion-section,
+.alimentacion-section,
+.after-school-section,
+.celebraciones-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.educacion-section img,
+.alimentacion-section img,
+.after-school-section img,
+.celebraciones-section img {
+    width: 35px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.que-ofrecemos-sections h3 {
+    font-size: 20px;
+}
+
+#que-ofrecemos p {
+    color: #515050;
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+    margin-inline: 30px;
+}
+
+.educacion-section h3 {
+    color: #FF2A2A;
+}
+
+.educacion-section img {
+    background-color: #FF2A2A;
+}
+
+.alimentacion-section h3 {
+    color: #49BB35;
+}
+
+.alimentacion-section img {
+    background-color: #49BB35;
+}
+
+.after-school-section h3 {
+    color: #1286E9;
+}
+
+.after-school-section img {
+    background-color: #1286E9;
+}
+
+.celebraciones-section h3 {
+    color: #ffc800;
+}
+
+.celebraciones-section img {
+    background-color: #ffc800;
+}
+
+.mafalda-ofrecemos {
+    height: 250px;
+    width: fit-content;
+}
+
+/* NIVELES */
+.niveles-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.medio-card,
+.mayor-card,
+.menor-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 40px 20px;
+    width: 200px;
+    outline: 3px dashed white;
+    outline-offset: -15px;
+}
+
+.medio-card {
+    background-color: #ffc800;
+}
+
+.menor-card {
+    background-color: #1286E9;
+}
+
+.mayor-card {
+    background-color: #FF2A2A;
+}
+
+.niveles-cards h3 {
+    font-size: 25px;
+}
+
+.niveles-cards p {
+    font-size: 20px;
+}
+
+/* JORNADAS */
+#jornadas h3 {
+    background-color: #49BB35;
+    font-size: 20px;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+#jornadas p {
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.jornadas-table {
+    margin-inline: 20px;
+}
+
+.jornadas-table div {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 5px;
+    background-color: #49bb3531;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.mafalda-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-block: 25px;
+}
+
+#jornadas img {
+    width: 300px;
+}
+
+/* CONTACTANOS */
+#contactanos {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+}
+
+.mafalda-contacto {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.ubicacion-card img,
+.horario-card img,
+.llamanos-card img,
+.wsp-card img {
+    filter: invert(1);
+    height: 30px;
+}
+
+#contactanos h3 {
+    font-size: 18px;
+}
+
+#contactanos p {
+    font-size: 15px;
+}
+
+.ubicacion-card,
+.horario-card,
+.llamanos-card,
+.wsp-card {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.ubicacion-card {
+    background-color: #FF2A2A;
+}
+
+.horario-card {
+    background-color: #ffc800;
+}
+
+.llamanos-card {
+    background-color: #1286E9;
+}
+
+.llamanos-card:hover {
+    background-color: #105796;
+}
+
+.wsp-card {
+    background-color: #49BB35
+}
+
+.wsp-card:hover {
+    background-color: #317a24
+}
+
+iframe {
+    margin-block: 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    padding-block: 25px;
+}
+
+footer img {
+    filter: invert(1);
+    height: 14px;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 3px;
+}
+
+footer h3 {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.github-logo {
+    height: 20px;
+    margin-top: 3px;
+}
