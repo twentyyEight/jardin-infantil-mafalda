@@ -34,126 +34,6 @@ a {
     color: white;
 }
 
-/* NAVBAR */
-nav {
-    position: fixed;
-    z-index: 2;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.mobile-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    row-gap: 5px;
-    margin: 10px;
-}
-
-.menu-nav,
-ul {
-    background-color: white;
-    padding: 6px;
-    border-radius: 5px;
-    width: fit-content;
-    position: relative;
-    z-index: 2;
-}
-
-.menu-nav {
-    display: flex;
-    font-size: 20px;
-    font-weight: 600;
-    align-items: center;
-    color: black;
-    gap: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.574);
-}
-
-.menu-nav img {
-    height: 25px;
-}
-
-ul {
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-ul.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-}
-
-
-li {
-    padding: 3px 6px;
-    border-radius: 6px;
-    font-weight: 500;
-    text-align: end;
-}
-
-.que-ofrecemos-nav,
-.niveles-nav,
-.jornadas-nav {
-    margin-bottom: 5px;
-}
-
-.que-ofrecemos-nav {
-    background-color: #FF2A2A;
-}
-
-.que-ofrecemos-nav:hover {
-    background-color: #d00000;
-}
-
-.niveles-nav {
-    background-color: #ffc800;
-}
-
-.niveles-nav:hover {
-    background-color: #b08a01;
-}
-
-.jornadas-nav {
-    background-color: #49BB35;
-}
-
-.jornadas-nav:hover {
-    background-color: #307c22;
-}
-
-.contactanos-nav {
-    background-color: #1286E9;
-}
-
-.contactanos-nav:hover {
-    background-color: #0f5490;
-}
-
-li {
-    list-style-type: none;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    display: none;
-    z-index: 1;
-}
-
-.overlay.active {
-    display: block;
-}
-
-
 /* HERO */
 .hero {
     width: 100%;
@@ -167,8 +47,13 @@ li {
     position: relative;
 }
 
+.hero div {
+    text-align: center;
+    padding-inline: 35px;
+}
+
 .hero img {
-    width: 200px;
+    width: 230px;
 }
 
 .hero h1 {
@@ -258,7 +143,7 @@ li {
 }
 
 .mafalda-ofrecemos {
-    height: 250px;
+    height: 35vh;
     width: fit-content;
 }
 
@@ -279,7 +164,7 @@ li {
     border-radius: 1rem;
     text-align: center;
     padding: 40px 20px;
-    width: 200px;
+    width: 50vw;
     outline: 3px dashed white;
     outline-offset: -15px;
 }
@@ -338,20 +223,28 @@ li {
 }
 
 #jornadas img {
-    width: 300px;
+    width: 90%;
 }
 
 /* CONTACTANOS */
-#contactanos {
+
+.contactanos-content {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
     align-items: center;
 }
 
-.mafalda-contacto {
-    width: 80%;
-    margin-bottom: 10px;
+.ubicacion-card,
+.horario-card,
+.llamanos-card,
+.wsp-card {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    gap: 13px;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .ubicacion-card img,
@@ -368,18 +261,6 @@ li {
 
 #contactanos p {
     font-size: 15px;
-}
-
-.ubicacion-card,
-.horario-card,
-.llamanos-card,
-.wsp-card {
-    display: flex;
-    align-items: center;
-    width: 260px;
-    gap: 15px;
-    padding: 15px;
-    border-radius: 5px;
 }
 
 .ubicacion-card {
@@ -408,6 +289,14 @@ li {
 
 iframe {
     margin-block: 20px;
+    width: 80vw;
+    height: 80vw;
+    border: 0;
+}
+
+.mafalda-contacto {
+    width: 80vw;
+    margin-bottom: 50px;
 }
 
 /* FOOTER */
@@ -436,6 +325,7 @@ footer h3 {
     font-size: 15px;
     text-align: center;
     margin-bottom: 5px;
+    margin-inline: 10px;
 }
 
 .github-logo {
