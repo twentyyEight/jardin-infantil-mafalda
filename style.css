@@ -16,8 +16,20 @@ h2 {
     font-size: 30px;
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
-    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+@media (min-width: 481px) {
+    h2 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 45px;
+    }
 }
 
 body,
@@ -34,7 +46,7 @@ a {
     color: white;
 }
 
-/* HERO */
+/* -------------------------- HERO -------------------------- */
 .hero {
     width: 100%;
     height: 100%;
@@ -71,12 +83,61 @@ a {
     margin-top: 10px;
 }
 
+@media (min-width: 429px) {
+    .hero img {
+        width: 280px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h3 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 680px) {
+    .hero img {
+        width: 320px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero h3 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero img {
+        width: 360px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero h3 {
+        font-size: 35px;
+    }
+}
+
 /* QUÉ OFRECEMOS */
 .que-ofrecemos-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
+}
+
+.left-text-container,
+.right-text-container {
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
 }
 
 .educacion-section,
@@ -89,6 +150,18 @@ a {
     row-gap: 5px;
 }
 
+.left-text-container {
+    order: 1;
+}
+
+.right-text-container {
+    order: 2;
+}
+
+.mafalda-ofrecemos {
+    order: 3;
+}
+
 .educacion-section img,
 .alimentacion-section img,
 .after-school-section img,
@@ -98,11 +171,49 @@ a {
     border-radius: 10px;
 }
 
-.que-ofrecemos-sections h3 {
+.educacion-section img {
+    background-color: #FF2A2A;
+}
+
+.alimentacion-section img {
+    background-color: #49BB35;
+}
+
+.after-school-section img {
+    background-color: #1286E9;
+}
+
+.celebraciones-section img {
+    background-color: #ffc800;
+}
+
+.educacion-section h3,
+.alimentacion-section h3,
+.after-school-section h3,
+.celebraciones-section h3 {
     font-size: 20px;
 }
 
-#que-ofrecemos p {
+.educacion-section h3 {
+    color: #FF2A2A;
+}
+
+.alimentacion-section h3 {
+    color: #49BB35;
+}
+
+.after-school-section h3 {
+    color: #1286E9;
+}
+
+.celebraciones-section h3 {
+    color: #ffc800;
+}
+
+.educacion-section p,
+.alimentacion-section p,
+.after-school-section p,
+.celebraciones-section p {
     color: #515050;
     font-weight: 500;
     text-align: center;
@@ -110,41 +221,125 @@ a {
     margin-inline: 30px;
 }
 
-.educacion-section h3 {
-    color: #FF2A2A;
-}
-
-.educacion-section img {
-    background-color: #FF2A2A;
-}
-
-.alimentacion-section h3 {
-    color: #49BB35;
-}
-
-.alimentacion-section img {
-    background-color: #49BB35;
-}
-
-.after-school-section h3 {
-    color: #1286E9;
-}
-
-.after-school-section img {
-    background-color: #1286E9;
-}
-
-.celebraciones-section h3 {
-    color: #ffc800;
-}
-
-.celebraciones-section img {
-    background-color: #ffc800;
-}
-
 .mafalda-ofrecemos {
     height: 35vh;
     width: fit-content;
+}
+
+@media (min-width: 481px) {
+
+    .educacion-section h3,
+    .alimentacion-section h3,
+    .after-school-section h3,
+    .celebraciones-section h3 {
+        font-size: 25px;
+    }
+
+    .educacion-section p,
+    .alimentacion-section p,
+    .after-school-section p,
+    .celebraciones-section p {
+        font-size: 19px;
+        margin-inline: 50px;
+    }
+
+    .educacion-section img,
+    .alimentacion-section img,
+    .after-school-section img,
+    .celebraciones-section img {
+        width: 45px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .left-text-container,
+    .right-text-container {
+        flex-direction: row;
+    }
+
+    .educacion-section p,
+    .alimentacion-section p,
+    .after-school-section p,
+    .celebraciones-section p {
+        margin-inline: 35px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .que-ofrecemos-content {
+        flex-direction: row;
+    }
+
+    .left-text-container,
+    .right-text-container {
+        flex-direction: column;
+        row-gap: 20px;
+        margin-inline: 45px;
+    }
+
+    .left-text-container {
+        order: 1;
+    }
+
+    .right-text-container {
+        order: 3;
+    }
+
+    .mafalda-ofrecemos {
+        order: 2;
+    }
+
+    .educacion-section,
+    .alimentacion-section {
+        align-items: end;
+    }
+
+    .after-school-section,
+    .celebraciones-section {
+        align-items: start;
+    }
+
+    .educacion-section p,
+    .alimentacion-section p,
+    .after-school-section p,
+    .celebraciones-section p {
+        margin-inline: 0;
+        font-size: 20px;
+    }
+
+    .educacion-section p,
+    .alimentacion-section p {
+        text-align: end;
+    }
+
+    .after-school-section p,
+    .celebraciones-section p {
+        text-align: start;
+    }
+
+    .mafalda-ofrecemos {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .educacion-section p,
+    .alimentacion-section p,
+    .after-school-section p,
+    .celebraciones-section p {
+        font-size: 21px;
+    }
+
+    .educacion-section h3,
+    .alimentacion-section h3,
+    .after-school-section h3,
+    .celebraciones-section h3 {
+        font-size: 27px;
+    }
 }
 
 /* NIVELES */
@@ -163,10 +358,16 @@ a {
     flex-direction: column;
     border-radius: 1rem;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px;
     width: 50vw;
     outline: 3px dashed white;
     outline-offset: -15px;
+    row-gap: 5px;
+}
+
+.mayor-card h3,
+.menor-card h3 {
+    line-height: 1;
 }
 
 .medio-card {
@@ -189,22 +390,87 @@ a {
     font-size: 20px;
 }
 
+@media (min-width: 481px) {
+
+    .niveles-cards h3 {
+        font-size: 30px;
+    }
+
+    .niveles-cards p {
+        font-size: 25px;
+    }
+
+    .medio-card,
+    .mayor-card,
+    .menor-card {
+        width: 250px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .niveles-cards {
+        flex-direction: row;
+        gap: 10px;
+        margin-inline: 30px;
+    }
+
+    .medio-card,
+    .mayor-card,
+    .menor-card {
+        width: 30vw;
+        height: 14vh;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .niveles-cards {
+        margin-inline: 50px;
+        justify-content: center;
+    }
+
+    .niveles-cards h3 {
+        font-size: 33px;
+    }
+
+    .niveles-cards p {
+        font-size: 27px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .medio-card,
+    .mayor-card,
+    .menor-card {
+        width: 320px;
+    }
+}
+
 /* JORNADAS */
-#jornadas h3 {
-    background-color: #49BB35;
-    font-size: 20px;
+.jornadas-container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.jornadas-table,
+.jornadas-container img {
+    width: 90%;
+}
+
+.jornadas-table h3,
+.jornadas-table div {
     padding: 3px 10px;
     border-radius: 5px;
-}
-
-#jornadas p {
-    color: black;
-    font-size: 17px;
-    font-weight: 500;
-}
-
-.jornadas-table {
-    margin-inline: 20px;
 }
 
 .jornadas-table div {
@@ -212,27 +478,102 @@ a {
     justify-content: space-between;
     margin-block: 5px;
     background-color: #49bb3531;
-    padding: 3px 10px;
-    border-radius: 5px;
+
 }
 
-.mafalda-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-block: 25px;
+.jornadas-table h3,
+.jornadas-table p {
+    font-size: 17px;
 }
 
-#jornadas img {
-    width: 90%;
+.jornadas-table h3 {
+    background-color: #49BB35;
+    text-align: center;
+}
+
+.jornadas-table p {
+    color: black;
+    font-weight: 500;
+}
+
+.jornadas-container img {
+    justify-self: end;
+}
+
+@media (min-width: 379px) {
+
+    .jornadas-table h3,
+    .jornadas-table p {
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 449px) {
+
+    .jornadas-table h3,
+    .jornadas-table p {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .jornadas-table h3,
+    .jornadas-table p {
+        font-size: 26px;
+    }
+
+    .jornadas-container img {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .jornadas-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .jornadas-table h3,
+    .jornadas-table p {
+        font-size: 26px;
+    }
+
+    .jornadas-container img {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .jornadas-table h3,
+    .jornadas-table p {
+        font-size: 29px;
+    }
+
+    .jornadas-table {
+        width: 80%;
+        justify-self: end;
+    }
 }
 
 /* CONTACTANOS */
-
-.contactanos-content {
+.contactanos-content,
+.contactanos-cards {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
+}
+
+.contactanos-content {
     align-items: center;
+}
+
+.contactanos-cards {
+    width: 80vw;
 }
 
 .ubicacion-card,
@@ -241,7 +582,7 @@ a {
 .wsp-card {
     display: flex;
     align-items: center;
-    width: 80vw;
+    width: 100%;
     gap: 13px;
     padding: 15px;
     border-radius: 5px;
@@ -255,11 +596,11 @@ a {
     height: 30px;
 }
 
-#contactanos h3 {
+.contactanos-cards h3 {
     font-size: 18px;
 }
 
-#contactanos p {
+.contactanos-cards p {
     font-size: 15px;
 }
 
@@ -295,16 +636,88 @@ iframe {
 }
 
 .mafalda-contacto {
-    width: 80vw;
-    margin-bottom: 50px;
+    width: 100%;
+    margin-top: 10px;
 }
 
-/* FOOTER */
-footer {
-    background-color: black;
+@media (min-width: 356px) {
+    br {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) {
+    .contactanos-cards h3 {
+        font-size: 20px;
+    }
+
+    .contactanos-cards p {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 849px) {
+    .contactanos-content {
+        display: grid;
+        grid-template-columns: auto 45vw;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+
+    .contactanos-cards {
+        width: 370px;
+    }
+
+    .contactanos-cards h3 {
+        font-size: 22px;
+    }
+
+    .contactanos-cards p {
+        font-size: 19px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contactanos-content {
+        display: grid;
+        grid-template-columns: auto 500px;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+
+    .contactanos-cards {
+        width: 370px;
+    }
+
+    .contactanos-cards h3 {
+        font-size: 25px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+}
+
+/* -------------------------- FOOTER -------------------------- */
+footer,
+footer div {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+footer {
+    background-color: black;
     row-gap: 5px;
     padding-block: 25px;
 }
@@ -314,15 +727,22 @@ footer img {
     height: 14px;
 }
 
+footer h3,
+footer a {
+    font-size: 15px;
+}
+
 footer a {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    gap: 3px;
+    gap: 6px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 footer h3 {
-    font-size: 15px;
     text-align: center;
     margin-bottom: 5px;
     margin-inline: 10px;
@@ -331,4 +751,36 @@ footer h3 {
 .github-logo {
     height: 20px;
     margin-top: 3px;
+}
+
+@media (min-width: 481px) {
+
+    footer h3,
+    footer a {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 749px) {
+
+    footer div {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 849px) {
+
+    footer h3,
+    footer a {
+        font-size: 20px;
+    }
+
+    footer img {
+        height: 18px;
+    }
+
+    .github-logo {
+        height: 25px;
+    }
 }
