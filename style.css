@@ -1,8 +1,7 @@
 body {
     color: white;
-    width: 100%;
-    height: 100vh;
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 }
 
 h1,
@@ -46,10 +45,45 @@ a {
     color: white;
 }
 
-/* -------------------------- HERO -------------------------- */
+/* NAVBAR */
+nav {
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+}
+
+ul {
+    width: 100vw;
+    list-style: none;
+    display: flex;
+    font-size: 25px;
+    font-weight: 600;
+    justify-content: space-between;
+    margin-inline: 10vw;
+    margin-top: 25px;
+}
+
+li a {
+    padding: 5px;
+}
+
+@media (min-width: 1000px) {
+    nav {
+        display: flex;
+    }
+}
+
+li a:hover {
+    background-color: rgba(255, 255, 255, 0.203);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* HERO */
 .hero {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("assets/reja-jardin.jpg") center/cover;
     display: flex;
@@ -57,6 +91,7 @@ a {
     justify-content: center;
     align-items: center;
     position: relative;
+    box-sizing: border-box;
 }
 
 .hero div {
@@ -321,7 +356,7 @@ a {
     }
 
     .mafalda-ofrecemos {
-        height: 50vh;
+        height: 45vh;
     }
 }
 
@@ -529,7 +564,7 @@ a {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
 
     .jornadas-container {
         display: grid;
@@ -547,7 +582,7 @@ a {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
 
     .jornadas-table h3,
     .jornadas-table p {
@@ -555,8 +590,8 @@ a {
     }
 
     .jornadas-table {
-        width: 80%;
-        justify-self: end;
+        width: 75%;
+        justify-self: center;
     }
 }
 
@@ -568,7 +603,8 @@ a {
     row-gap: 5px;
 }
 
-.contactanos-content {
+.contactanos-content,
+.contactanos-cards {
     align-items: center;
 }
 
