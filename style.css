@@ -193,10 +193,6 @@ li a:hover {
     order: 2;
 }
 
-.mafalda-ofrecemos {
-    order: 3;
-}
-
 .educacion-section img,
 .alimentacion-section img,
 .after-school-section img,
@@ -258,7 +254,7 @@ li a:hover {
 
 .mafalda-ofrecemos {
     height: 35vh;
-    width: fit-content;
+    order: 3;
 }
 
 @media (min-width: 481px) {
@@ -601,11 +597,11 @@ li a:hover {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
+    align-items: center;
 }
 
-.contactanos-content,
-.contactanos-cards {
-    align-items: center;
+.contactanos-content {
+    margin-bottom: 80px;
 }
 
 .contactanos-cards {
