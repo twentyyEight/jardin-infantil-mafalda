@@ -1,3 +1,17 @@
+/* ================================
+   BASE & VARIABLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    --rojo: #FF2A2A;
+    --amarillo: #ffc800;
+    --verde: #49BB35;
+    --azul: #1286E9;
+}
+
 body {
     color: white;
     font-family: 'Quicksand', sans-serif;
@@ -19,33 +33,15 @@ h2 {
     margin-top: 80px;
 }
 
-@media (min-width: 481px) {
-    h2 {
-        font-size: 35px;
-    }
-}
-
-@media (min-width: 1200px) {
-    h2 {
-        font-size: 45px;
-    }
-}
-
-body,
-h1,
-h3,
-p,
-ul {
-    margin: 0;
-    padding: 0;
-}
-
 a {
     text-decoration: none;
     color: white;
 }
 
-/* NAVBAR */
+/* ================================
+   NAVBAR
+================================ */
+
 nav {
     position: absolute;
     z-index: 2;
@@ -70,20 +66,17 @@ li a {
     font-weight: 600;
 }
 
-@media (min-width: 1000px) {
-    nav {
-        display: flex;
-    }
-}
-
 li a:hover {
     background-color: rgba(255, 255, 255, 0.203);
     padding: 5px;
     border-radius: 10px;
 }
 
-/* HERO */
-.hero {
+/* ================================
+   HERO
+================================ */
+
+#hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("assets/reja-jardin.jpg") center/cover;
@@ -95,22 +88,22 @@ li a:hover {
     box-sizing: border-box;
 }
 
-.hero div {
+#hero div {
     text-align: center;
     padding-inline: 35px;
 }
 
-.hero img {
+#hero img {
     width: 230px;
 }
 
-.hero h1 {
+#hero h1 {
     font-size: 35px;
     text-align: center;
     line-height: 1;
 }
 
-.hero h3 {
+#hero h3 {
     font-family: "Playwrite US Modern", cursive;
     font-weight: 300;
     font-size: 22px;
@@ -119,133 +112,49 @@ li a:hover {
     margin-top: 10px;
 }
 
-@media (min-width: 429px) {
-    .hero img {
-        width: 280px;
-    }
+/* ================================
+   QUÉ OFRECEMOS
+================================ */
 
-    .hero h1 {
-        font-size: 45px;
-    }
-
-    .hero h3 {
-        font-size: 25px;
-    }
-}
-
-@media (min-width: 680px) {
-    .hero img {
-        width: 320px;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-    }
-
-    .hero h3 {
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .hero img {
-        width: 360px;
-    }
-
-    .hero h1 {
-        font-size: 70px;
-    }
-
-    .hero h3 {
-        font-size: 35px;
-    }
-}
-
-/* QUÉ OFRECEMOS */
-.que-ofrecemos-content {
+#que-ofrecemos {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
 }
 
-.left-text-container,
-.right-text-container {
+.container {
     display: flex;
     row-gap: 30px;
     flex-direction: column;
 }
 
-.educacion-section,
-.alimentacion-section,
-.after-school-section,
-.celebraciones-section {
+.left {
+    order: 1;
+}
+
+.right {
+    order: 2;
+}
+
+.section {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
 }
 
-.left-text-container {
-    order: 1;
-}
-
-.right-text-container {
-    order: 2;
-}
-
-.educacion-section img,
-.alimentacion-section img,
-.after-school-section img,
-.celebraciones-section img {
+.section img {
     width: 35px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.educacion-section img {
-    background-color: #FF2A2A;
-}
-
-.alimentacion-section img {
-    background-color: #49BB35;
-}
-
-.after-school-section img {
-    background-color: #1286E9;
-}
-
-.celebraciones-section img {
-    background-color: #ffc800;
-}
-
-.educacion-section h3,
-.alimentacion-section h3,
-.after-school-section h3,
-.celebraciones-section h3 {
+.section h3 {
     font-size: 20px;
 }
 
-.educacion-section h3 {
-    color: #FF2A2A;
-}
-
-.alimentacion-section h3 {
-    color: #49BB35;
-}
-
-.after-school-section h3 {
-    color: #1286E9;
-}
-
-.celebraciones-section h3 {
-    color: #ffc800;
-}
-
-.educacion-section p,
-.alimentacion-section p,
-.after-school-section p,
-.celebraciones-section p {
+.section p {
     color: #515050;
     font-weight: 500;
     text-align: center;
@@ -253,138 +162,63 @@ li a:hover {
     margin-inline: 30px;
 }
 
+.educacion img {
+    background-color: var(--rojo);
+}
+
+.alimentacion img {
+    background-color: var(--verde);
+}
+
+.after-school img {
+    background-color: var(--azul);
+}
+
+.celebraciones img {
+    background-color: var(--amarillo);
+}
+
+.educacion h3 {
+    color: var(--rojo);
+}
+
+.alimentacion h3 {
+    color: var(--verde);
+}
+
+.after-school h3 {
+    color: var(--azul);
+}
+
+.celebraciones h3 {
+    color: var(--amarillo);
+}
+
 .mafalda-ofrecemos {
     height: 35vh;
     order: 3;
 }
 
-@media (min-width: 481px) {
+/* ================================
+   NIVELES
+================================ */
 
-    .educacion-section h3,
-    .alimentacion-section h3,
-    .after-school-section h3,
-    .celebraciones-section h3 {
-        font-size: 25px;
-    }
-
-    .educacion-section p,
-    .alimentacion-section p,
-    .after-school-section p,
-    .celebraciones-section p {
-        font-size: 19px;
-        margin-inline: 50px;
-    }
-
-    .educacion-section img,
-    .alimentacion-section img,
-    .after-school-section img,
-    .celebraciones-section img {
-        width: 45px;
-    }
-
-}
-
-@media (min-width: 768px) {
-
-    .left-text-container,
-    .right-text-container {
-        flex-direction: row;
-    }
-
-    .educacion-section p,
-    .alimentacion-section p,
-    .after-school-section p,
-    .celebraciones-section p {
-        margin-inline: 35px;
-    }
-}
-
-@media (min-width: 1024px) {
-
-    .que-ofrecemos-content {
-        flex-direction: row;
-    }
-
-    .left-text-container,
-    .right-text-container {
-        flex-direction: column;
-        row-gap: 20px;
-        margin-inline: 45px;
-    }
-
-    .left-text-container {
-        order: 1;
-    }
-
-    .right-text-container {
-        order: 3;
-    }
-
-    .mafalda-ofrecemos {
-        order: 2;
-    }
-
-    .educacion-section,
-    .alimentacion-section {
-        align-items: end;
-    }
-
-    .after-school-section,
-    .celebraciones-section {
-        align-items: start;
-    }
-
-    .educacion-section p,
-    .alimentacion-section p,
-    .after-school-section p,
-    .celebraciones-section p {
-        margin-inline: 0;
-        font-size: 20px;
-    }
-
-    .educacion-section p,
-    .alimentacion-section p {
-        text-align: end;
-    }
-
-    .after-school-section p,
-    .celebraciones-section p {
-        text-align: start;
-    }
-
-    .mafalda-ofrecemos {
-        height: 45vh;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .educacion-section p,
-    .alimentacion-section p,
-    .after-school-section p,
-    .celebraciones-section p {
-        font-size: 21px;
-    }
-
-    .educacion-section h3,
-    .alimentacion-section h3,
-    .after-school-section h3,
-    .celebraciones-section h3 {
-        font-size: 27px;
-    }
-}
-
-/* NIVELES */
-.niveles-cards {
+#niveles {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 15px;
 }
 
-.medio-card,
-.mayor-card,
-.menor-card {
+#niveles h3 {
+    font-size: 25px;
+}
+
+#niveles p {
+    font-size: 20px;
+}
+
+.card {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -396,97 +230,28 @@ li a:hover {
     outline-offset: -15px;
     row-gap: 5px;
 }
-
-.mayor-card h3,
-.menor-card h3 {
+            
+.card h3 {
     line-height: 1;
 }
 
-.medio-card {
-    background-color: #ffc800;
+.medio {
+    background-color: var(--amarillo);
 }
 
-.menor-card {
-    background-color: #1286E9;
+.menor {
+    background-color: var(--azul);
 }
 
-.mayor-card {
-    background-color: #FF2A2A;
+.mayor {
+    background-color: var(--rojo);
 }
 
-.niveles-cards h3 {
-    font-size: 25px;
-}
+/* ================================
+   JORNADAS
+================================ */
 
-.niveles-cards p {
-    font-size: 20px;
-}
-
-@media (min-width: 481px) {
-
-    .niveles-cards h3 {
-        font-size: 30px;
-    }
-
-    .niveles-cards p {
-        font-size: 25px;
-    }
-
-    .medio-card,
-    .mayor-card,
-    .menor-card {
-        width: 250px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .niveles-cards {
-        flex-direction: row;
-        gap: 10px;
-        margin-inline: 30px;
-    }
-
-    .medio-card,
-    .mayor-card,
-    .menor-card {
-        width: 30vw;
-        height: 14vh;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (min-width: 1024px) {
-
-    .niveles-cards {
-        margin-inline: 50px;
-        justify-content: center;
-    }
-
-    .niveles-cards h3 {
-        font-size: 33px;
-    }
-
-    .niveles-cards p {
-        font-size: 27px;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .medio-card,
-    .mayor-card,
-    .menor-card {
-        width: 320px;
-    }
-}
-
-/* JORNADAS */
-.jornadas-container {
+#jornadas {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: auto auto;
@@ -494,124 +259,72 @@ li a:hover {
     row-gap: 20px;
 }
 
-.jornadas-table,
-.jornadas-container img {
+#table,
+#jornadas img {
     width: 90%;
 }
 
-.jornadas-table h3,
-.jornadas-table div {
+#table h3,
+#table div {
     padding: 3px 10px;
     border-radius: 5px;
 }
 
-.jornadas-table div {
+#table div {
     display: flex;
     justify-content: space-between;
     margin-block: 5px;
     background-color: #49bb3531;
-
 }
 
-.jornadas-table h3,
-.jornadas-table p {
+#table h3,
+#table p {
     font-size: 17px;
 }
 
-.jornadas-table h3 {
+#table h3 {
     background-color: #49BB35;
     text-align: center;
 }
 
-.jornadas-table p {
+#table p {
     color: black;
     font-weight: 500;
 }
 
-.jornadas-container img {
+#jornadas img {
     justify-self: end;
 }
 
-@media (min-width: 379px) {
+/* ================================
+   CONTÁCTANOS
+================================ */
 
-    .jornadas-table h3,
-    .jornadas-table p {
-        font-size: 20px;
-    }
-
-}
-
-@media (min-width: 449px) {
-
-    .jornadas-table h3,
-    .jornadas-table p {
-        font-size: 24px;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .jornadas-table h3,
-    .jornadas-table p {
-        font-size: 26px;
-    }
-
-    .jornadas-container img {
-        width: 75%;
-    }
-}
-
-@media (min-width: 1000px) {
-
-    .jornadas-container {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-
-    .jornadas-table h3,
-    .jornadas-table p {
-        font-size: 26px;
-    }
-
-    .jornadas-container img {
-        width: 90%;
-    }
-}
-
-@media (min-width: 1280px) {
-
-    .jornadas-table h3,
-    .jornadas-table p {
-        font-size: 29px;
-    }
-
-    .jornadas-table {
-        width: 75%;
-        justify-self: center;
-    }
-}
-
-/* CONTACTANOS */
-.contactanos-content,
-.contactanos-cards {
+#contactanos,
+#contactanos-items {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
     align-items: center;
 }
 
-.contactanos-content {
+#contactanos {
     margin-bottom: 80px;
 }
 
-.contactanos-cards {
+#contactanos-items {
     width: 80vw;
 }
 
-.ubicacion-card,
-.horario-card,
-.llamanos-card,
-.wsp-card {
+#contactanos-items h3 {
+    font-size: 18px;
+}
+
+#contactanos-items p {
+    font-size: 15px;
+}
+
+.item {
     display: flex;
     align-items: center;
     width: 100%;
@@ -620,43 +333,38 @@ li a:hover {
     border-radius: 5px;
 }
 
-.ubicacion-card img,
-.horario-card img,
-.llamanos-card img,
-.wsp-card img {
+.item img {
     filter: invert(1);
     height: 30px;
 }
 
-.contactanos-cards h3 {
-    font-size: 18px;
+.ubicacion {
+    background-color: var(--rojo);
 }
 
-.contactanos-cards p {
-    font-size: 15px;
+.horario {
+    background-color: var(--amarillo);
 }
 
-.ubicacion-card {
-    background-color: #FF2A2A;
+.llamanos {
+    background-color: var(--azul);
 }
 
-.horario-card {
-    background-color: #ffc800;
-}
-
-.llamanos-card {
-    background-color: #1286E9;
-}
-
-.llamanos-card:hover {
+.llamanos:hover,
+.llamanos:active {
     background-color: #105796;
 }
 
-.wsp-card {
-    background-color: #49BB35
+.llamanos span {
+    display: none;
 }
 
-.wsp-card:hover {
+.wsp {
+    background-color: var(--verde)
+}
+
+.wsp:hover,
+.wsp:active {
     background-color: #317a24
 }
 
@@ -667,65 +375,15 @@ iframe {
     border: 0;
 }
 
-.mafalda-contacto {
+#mafalda-contacto {
     width: 100%;
     margin-top: 10px;
 }
 
-@media (min-width: 356px) {
-    br {
-        display: none;
-    }
-}
+/* ================================
+   FOOTER
+================================ */
 
-@media (min-width: 481px) {
-    .contactanos-cards h3 {
-        font-size: 20px;
-    }
-
-    .contactanos-cards p {
-        font-size: 17px;
-    }
-}
-
-@media (min-width: 849px) {
-    .contactanos-content {
-        display: grid;
-        grid-template-columns: auto 45vw;
-        justify-content: center;
-        gap: 50px;
-    }
-
-    .contactanos-cards {
-        width: 370px;
-    }
-
-    .contactanos-cards h3 {
-        font-size: 22px;
-    }
-
-    .contactanos-cards p {
-        font-size: 19px;
-    }
-
-    iframe {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-}
-
-@media (min-width: 1024px) {
-    .contactanos-content {
-        grid-template-columns: auto 500px;
-    }
-
-    .contactanos-cards h3 {
-        font-size: 25px;
-    }
-}
-
-/* FOOTER */
 footer,
 footer div {
     display: flex;
@@ -765,12 +423,69 @@ footer h3 {
     margin-inline: 10px;
 }
 
-.github-logo {
+#github-logo {
     height: 20px;
     margin-top: 3px;
 }
 
-@media (min-width: 481px) {
+/* ================================
+   MEDIA QUERIES
+================================ */
+
+@media (min-width: 356px) {
+    br {
+        display: none;
+    }
+}
+
+@media (min-width: 379px) {
+
+    #table h3,
+    #table p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 480px) {
+    h2 {
+        font-size: 35px;
+    }
+
+    .section img {
+        width: 45px;
+    }
+
+    .section h3 {
+        font-size: 25px;
+    }
+
+    .section p {
+        font-size: 19px;
+        margin-inline: 50px;
+    }
+
+    #niveles h3 {
+        font-size: 30px;
+    }
+
+    #niveles p {
+        font-size: 25px;
+    }
+
+    .card {
+        width: 250px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #contactanos-items h3 {
+        font-size: 20px;
+    }
+
+    #contactanos-items p {
+        font-size: 17px;
+    }
 
     footer h3,
     footer a {
@@ -778,15 +493,104 @@ footer h3 {
     }
 }
 
-@media (min-width: 749px) {
+@media (min-width: 768px) {
+
+    #hero img {
+        width: 320px;
+    }
+
+    #hero h1 {
+        font-size: 50px;
+    }
+
+    #hero h3 {
+        font-size: 30px;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .section p {
+        margin-inline: 35px;
+    }
+
+    #niveles {
+        flex-direction: row;
+        gap: 10px;
+        margin-inline: 30px;
+    }
+
+    .card {
+        width: 30vw;
+        height: 14vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    #table h3,
+    #table p {
+        font-size: 26px;
+    }
+
+    #jornadas img {
+        width: 75%;
+    }
+
+    #contactanos {
+        display: flex;
+        justify-content: center;
+    }
+
+    #contactanos-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    #contactanos-items>* {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 6px;
+    }
+
+    #contactanos-items h3 {
+        font-size: 22px;
+    }
+
+    #contactanos-items p {
+        font-size: 19px;
+    }
+
+    #contactanos-items img {
+        margin-left: 10px;
+    }
+
+    .llamanos {
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+    .llamanos p {
+        display: none;
+    }
+
+    .llamanos span {
+        display: block;
+    }
+
+    iframe {
+        height: 35vh;
+        width: 80%;
+    }
 
     footer div {
         flex-direction: row;
         gap: 20px;
     }
-}
-
-@media (min-width: 849px) {
 
     footer h3,
     footer a {
@@ -797,7 +601,160 @@ footer h3 {
         height: 18px;
     }
 
-    .github-logo {
+    #github-logo {
         height: 25px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    nav {
+        display: flex;
+    }
+
+    #hero img {
+        width: 360px;
+    }
+
+    #hero h1 {
+        font-size: 70px;
+    }
+
+    #hero h3 {
+        font-size: 35px;
+    }
+
+    #que-ofrecemos {
+        flex-direction: row;
+    }
+
+    .container {
+        flex-direction: column;
+        row-gap: 20px;
+        margin-inline: 45px;
+    }
+
+    .section p {
+        margin-inline: 0;
+        font-size: 20px;
+    }
+
+    .left {
+        order: 1;
+    }
+
+    .right {
+        order: 3;
+    }
+
+    .mafalda-ofrecemos {
+        order: 2;
+    }
+
+    .educacion,
+    .alimentacion {
+        align-items: end;
+    }
+
+    .after-school,
+    .celebraciones {
+        align-items: start;
+    }
+
+    .educacion p,
+    .alimentacion p {
+        text-align: end;
+    }
+
+    .after-school p,
+    .celebraciones p {
+        text-align: start;
+    }
+
+    .mafalda-ofrecemos {
+        height: 45vh;
+    }
+
+    #niveles {
+        margin-inline: 50px;
+        justify-content: center;
+    }
+
+    #niveles h3 {
+        font-size: 33px;
+    }
+
+    #niveles p {
+        font-size: 27px;
+    }
+
+    #jornadas {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    #table h3,
+    #table p {
+        font-size: 26px;
+    }
+
+    #jornadas img {
+        width: 90%;
+    }
+
+    #contactanos {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    #contactanos-items {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 10px;
+    }
+
+    #contactanos-items>* {
+        display: flex;
+        justify-content: start;
+        padding: 15px;
+    }
+
+    #contactanos-items h3 {
+        font-size: 25px;
+    }
+
+    iframe {
+        width: 35%;
+        height: 50vh;
+        margin-block: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 45px;
+    }
+
+    .section p {
+        font-size: 21px;
+    }
+
+    .section h3 {
+        font-size: 27px;
+    }
+
+    .card {
+        width: 320px;
+    }
+
+    #table {
+        width: 75%;
+        justify-self: center;
+    }
+
+    #table h3,
+    #table p {
+        font-size: 26px;
     }
 }

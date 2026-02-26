@@ -29,7 +29,7 @@
     </nav>
 
     <!-- HERO -->
-    <div class="hero">
+    <div id="hero">
         <div>
             <img src="assets/mafalda-inicio.png" alt="mafalda y amigos">
             <h1>Jardín Infantil Mafalda</h1>
@@ -38,13 +38,14 @@
     </div>
 
     <!-- QUE OFRECEMOS -->
-    <div id="que-ofrecemos">
+    <div>
         <h2>Qué ofrecemos</h2>
 
-        <div class="que-ofrecemos-content">
+        <div id="que-ofrecemos">
 
-            <div class="left-text-container">
-                <div class="educacion-section">
+            <div class="container left">
+
+                <div class="section educacion">
                     <img src="assets/libro.png" alt="libro">
                     <h3>Educación Integral</h3>
                     <p>Ofrecemos una educación que estimula el desarrollo cognitivo, motriz y emocional, preparando a
@@ -53,7 +54,7 @@
                         para la educación básica.</p>
                 </div>
 
-                <div class="alimentacion-section">
+                <div class="section alimentacion">
                     <img src="assets/manzana.png" alt="manzana">
                     <h3>Alimentación</h3>
                     <p>
@@ -62,10 +63,12 @@
                         saludables desde pequeños.
                     </p>
                 </div>
+
             </div>
 
-            <div class="right-text-container">
-                <div class="after-school-section">
+            <div class="container right">
+
+                <div class="section after-school">
                     <img src="assets/mochila.png" alt="mochila">
                     <h3>After School</h3>
                     <p>Nuestro After School ofrece acompañamiento en las tardes, con actividades recreativas y apoyo en
@@ -73,7 +76,7 @@
                     </p>
                 </div>
 
-                <div class="celebraciones-section">
+                <div class="section celebraciones">
                     <img src="assets/celebracion.png" alt="serpentinas">
                     <h3>Celebraciones</h3>
                     <p>
@@ -82,6 +85,7 @@
                         patrias y navidad
                     </p>
                 </div>
+
             </div>
 
             <img src="assets/mafalda-ofrecemos.png" alt="mafalda ampolleta" class="mafalda-ofrecemos">
@@ -90,34 +94,37 @@
     </div>
 
     <!-- NIVELES -->
-    <div id="niveles">
+    <div>
         <h2>Niveles</h2>
 
-        <div class="niveles-cards">
-            <div class="medio-card">
+        <div id="niveles">
+
+            <div class="card medio">
                 <h3>Medio</h3>
                 <p>2 a 3 años</p>
             </div>
 
-            <div class="menor-card">
+            <div class="card menor">
                 <h3>Transición Menor</h3>
                 <p>4 a 5 años</p>
             </div>
 
-            <div class="mayor-card">
+            <div class="card mayor">
                 <h3>Transición Mayor</h3>
                 <p>5 a 6 años</p>
             </div>
+
         </div>
 
     </div>
 
     <!-- JORNADAS -->
-    <div id="jornadas">
+    <div>
         <h2>Jornadas</h2>
 
-        <div class="jornadas-container">
-            <div class="jornadas-table">
+        <div id="jornadas">
+
+            <div id="table">
                 <h3>~ Mañana ~</h3>
                 <div>
                     <p>Lunes a Viernes</p>
@@ -147,13 +154,14 @@
     </div>
 
     <!-- CONTACTANOS -->
-    <div id="contactanos">
+    <div>
         <h2>Contáctanos</h2>
 
-        <div class="contactanos-content">
+        <div id="contactanos">
 
-            <div class="contactanos-cards">
-                <div class="ubicacion-card">
+            <div id="contactanos-items">
+
+                <div class="item ubicacion">
                     <img src="assets/ubicacion.png" alt="ubicacion">
                     <div>
                         <h3>Ubicación</h3>
@@ -161,7 +169,7 @@
                     </div>
                 </div>
 
-                <div class="horario-card">
+                <div class="item horario">
                     <img src="assets/reloj.png" alt="reloj">
                     <div>
                         <h3>Horario de atención</h3>
@@ -169,17 +177,25 @@
                     </div>
                 </div>
 
-                <a href="tel:+56994356165" class="llamanos-card">
+                <a href="tel:+56994356165" class="item llamanos">
                     <img src="assets/telefono.png" alt="telefono">
-                    <h3>Llámanos</h3>
+                    <div>
+                        <h3>Llámanos</h3>
+                        <span>+56 9 9435 6165</span>
+                        <p>Presiona el botón para llamar</p>
+                    </div>
                 </a>
 
-                <a href="https://wa.me/56994356165" class="wsp-card">
+                <a href="https://wa.me/56994356165" class="item wsp">
                     <img src="assets/whatsapp.png" alt="whatsapp">
-                    <h3>Háblanos por WhatsApp</h3>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>Presiona el botón para chatear</p>
+                    </div>
                 </a>
 
-                <img src="assets/mafalda-contacto.jpg" alt="mafalda globo terraqueo" class="mafalda-contacto">
+                <!-- <img src="assets/mafalda-contacto.jpg" alt="mafalda globo terraqueo" id="mafalda-contacto"> -->
+
             </div>
 
             <iframe
@@ -187,8 +203,6 @@
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
-
-
     </div>
 
     <!-- FOOTER -->
@@ -207,7 +221,7 @@
             </a>
 
             <a href="https://github.com/twentyyEight">
-                <img src="assets/github.png" alt="github" class="github-logo">
+                <img src="assets/github.png" alt="github" id="github-logo">
             </a>
         </div>
 
