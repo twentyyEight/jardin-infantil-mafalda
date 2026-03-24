@@ -26,11 +26,11 @@ h2 {
 
 h2 {
     color: black;
-    font-size: 30px;
+    font-size: 35px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 a {
@@ -79,7 +79,7 @@ li a:hover {
 #hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("assets/reja-jardin.jpg") center/cover;
+        url("assets/hero/reja-jardin.jpg") center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,14 +91,18 @@ li a:hover {
 #hero div {
     text-align: center;
     padding-inline: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
 }
 
 #hero img {
-    width: 230px;
+    width: 75vw;
 }
 
 #hero h1 {
-    font-size: 35px;
+    font-size: 45px;
     text-align: center;
     line-height: 1;
 }
@@ -106,10 +110,29 @@ li a:hover {
 #hero h3 {
     font-family: "Playwrite US Modern", cursive;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 25px;
     text-align: center;
     line-height: 1.2;
     margin-top: 10px;
+}
+
+#redirect {
+    background-color: var(--verde);
+    font-weight: 700;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 20px;
+}
+
+#redirect:hover,
+#redirect:active {
+    background-color: green;
+}
+
+#redirect:active {
+    text-decoration: underline;
 }
 
 /* ================================
@@ -151,14 +174,14 @@ li a:hover {
 }
 
 .section h3 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .section p {
     color: #515050;
     font-weight: 500;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     margin-inline: 30px;
 }
 
@@ -195,7 +218,7 @@ li a:hover {
 }
 
 .mafalda-ofrecemos {
-    height: 35vh;
+    height: 40vh;
     order: 3;
 }
 
@@ -230,7 +253,7 @@ li a:hover {
     outline-offset: -15px;
     row-gap: 5px;
 }
-            
+
 .card h3 {
     line-height: 1;
 }
@@ -277,19 +300,16 @@ li a:hover {
     background-color: #49bb3531;
 }
 
-#table h3,
-#table p {
-    font-size: 17px;
-}
-
 #table h3 {
     background-color: #49BB35;
     text-align: center;
+    font-size: 20px;
 }
 
 #table p {
     color: black;
     font-weight: 500;
+    font-size: 17px;
 }
 
 #jornadas img {
@@ -300,84 +320,103 @@ li a:hover {
    CONTÁCTANOS
 ================================ */
 
-#contactanos,
-#contactanos-items {
+#contacto,
+#items,
+#items>* {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    row-gap: 5px;
-    align-items: center;
 }
 
-#contactanos {
-    margin-bottom: 80px;
+#items {
+    gap: 10px;
 }
 
-#contactanos-items {
-    width: 80vw;
+#items>* {
+    text-align: center;
+    border-radius: 10px;
+    padding-block: 15px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.423);
+    gap: 5px;
+    width: 290px;
 }
 
-#contactanos-items h3 {
-    font-size: 18px;
+#items img {
+    width: 30px;
 }
 
-#contactanos-items p {
-    font-size: 15px;
+#items h3 {
+    color: black;
+    font-size: 25px;
 }
 
-.item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 13px;
-    padding: 15px;
-    border-radius: 5px;
+#items p {
+    color: #515050;
+    font-weight: 600;
+    font-size: 20px;
 }
 
-.item img {
-    filter: invert(1);
+.fondo {
+    width: 30px;
     height: 30px;
+    padding: 10px;
+    border-radius: 50%;
 }
 
-.ubicacion {
-    background-color: var(--rojo);
+#ubicacion .fondo {
+    background-color: #ff2a2a37;
 }
 
-.horario {
-    background-color: var(--amarillo);
+#horario .fondo {
+    background-color: #ffc80037;
 }
 
-.llamanos {
+#llamanos .fondo {
+    background-color: #1285e941;
+}
+
+#wsp .fondo {
+    background-color: #49bb3554;
+}
+
+.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#wsp .btn {
+    background-color: var(--verde);
+}
+
+#wsp .btn:hover {
+    background-color: green;
+}
+
+#llamanos .btn {
     background-color: var(--azul);
 }
 
-.llamanos:hover,
-.llamanos:active {
-    background-color: #105796;
+#llamanos .btn:active,
+#wsp .btn:active {
+    text-decoration: underline;
 }
 
-.llamanos span {
-    display: none;
-}
-
-.wsp {
-    background-color: var(--verde)
-}
-
-.wsp:hover,
-.wsp:active {
-    background-color: #317a24
+#contacto h4 {
+    color: black;
+    font-family: "Playwrite US Modern", cursive;
+    font-size: 20px;
+    margin-top: 25px;
 }
 
 iframe {
     margin-block: 20px;
-    width: 80vw;
-    height: 80vw;
     border: 0;
-}
-
-#mafalda-contacto {
-    width: 100%;
-    margin-top: 10px;
+    width: 85%;
+    height: 80vw;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.423);
+    margin-bottom: 80px;
 }
 
 /* ================================
@@ -397,14 +436,22 @@ footer {
     padding-block: 25px;
 }
 
+footer div {
+    gap: 5px;
+    margin-top: 5px;
+}
+
 footer img {
     filter: invert(1);
     height: 14px;
 }
 
-footer h3,
-footer a {
-    font-size: 15px;
+footer h3 {
+    font-size: 25px;
+}
+
+footer p {
+    font-size: 20px;
 }
 
 footer a {
@@ -432,14 +479,9 @@ footer h3 {
    MEDIA QUERIES
 ================================ */
 
-@media (min-width: 356px) {
-    br {
-        display: none;
-    }
-}
-
 @media (min-width: 379px) {
 
+    /* JORNADAS */
     #table h3,
     #table p {
         font-size: 20px;
@@ -447,10 +489,13 @@ footer h3 {
 }
 
 @media (min-width: 480px) {
+
+    /* BASE */
     h2 {
         font-size: 35px;
     }
 
+    /* QUE OFRECEMOS */
     .section img {
         width: 45px;
     }
@@ -464,6 +509,7 @@ footer h3 {
         margin-inline: 50px;
     }
 
+    /* NIVELES */
     #niveles h3 {
         font-size: 30px;
     }
@@ -479,14 +525,7 @@ footer h3 {
         justify-content: center;
     }
 
-    #contactanos-items h3 {
-        font-size: 20px;
-    }
-
-    #contactanos-items p {
-        font-size: 17px;
-    }
-
+    /* FOOTER */
     footer h3,
     footer a {
         font-size: 18px;
@@ -495,8 +534,9 @@ footer h3 {
 
 @media (min-width: 768px) {
 
+    /* HERO */
     #hero img {
-        width: 320px;
+        width: 400px;
     }
 
     #hero h1 {
@@ -507,6 +547,7 @@ footer h3 {
         font-size: 30px;
     }
 
+    /* QUE OFRECEMOS */
     .container {
         flex-direction: row;
     }
@@ -515,6 +556,7 @@ footer h3 {
         margin-inline: 35px;
     }
 
+    /* NIVELES */
     #niveles {
         flex-direction: row;
         gap: 10px;
@@ -528,58 +570,29 @@ footer h3 {
         justify-content: center;
     }
 
+    /* JORNADAS */
     #table h3,
     #table p {
         font-size: 26px;
     }
 
     #jornadas img {
-        width: 75%;
+        width: 60%;
     }
 
-    #contactanos {
-        display: flex;
-        justify-content: center;
-    }
-
-    #contactanos-items {
+    /* CONTACTO */
+    #items {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #items>* {
+        height: 150px;
         justify-content: center;
-        align-items: stretch;
-        gap: 20px;
     }
 
-    #contactanos-items>* {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        padding: 6px;
-    }
-
-    #contactanos-items h3 {
-        font-size: 22px;
-    }
-
-    #contactanos-items p {
-        font-size: 19px;
-    }
-
-    #contactanos-items img {
-        margin-left: 10px;
-    }
-
-    .llamanos {
-        pointer-events: none;
-        cursor: not-allowed;
-    }
-
-    .llamanos p {
+    #llamanos .btn {
         display: none;
-    }
-
-    .llamanos span {
-        display: block;
     }
 
     iframe {
@@ -587,6 +600,7 @@ footer h3 {
         width: 80%;
     }
 
+    /* FOOTER */
     footer div {
         flex-direction: row;
         gap: 20px;
@@ -608,10 +622,13 @@ footer h3 {
 }
 
 @media (min-width: 1024px) {
+
+    /* NAVBAR */
     nav {
         display: flex;
     }
 
+    /* HERO */
     #hero img {
         width: 360px;
     }
@@ -624,6 +641,7 @@ footer h3 {
         font-size: 35px;
     }
 
+    /* QUE OFRECEMOS */
     #que-ofrecemos {
         flex-direction: row;
     }
@@ -649,6 +667,7 @@ footer h3 {
 
     .mafalda-ofrecemos {
         order: 2;
+        height: 50vh;
     }
 
     .educacion,
@@ -671,10 +690,7 @@ footer h3 {
         text-align: start;
     }
 
-    .mafalda-ofrecemos {
-        height: 45vh;
-    }
-
+    /* NIVELES */
     #niveles {
         margin-inline: 50px;
         justify-content: center;
@@ -688,6 +704,7 @@ footer h3 {
         font-size: 27px;
     }
 
+    /* JORNADAS */
     #jornadas {
         grid-template-columns: 1fr 1fr;
         align-items: center;
@@ -699,41 +716,25 @@ footer h3 {
     }
 
     #jornadas img {
-        width: 90%;
-    }
-
-    #contactanos {
-        flex-direction: row;
-        gap: 50px;
-    }
-
-    #contactanos-items {
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        gap: 10px;
-    }
-
-    #contactanos-items>* {
-        display: flex;
-        justify-content: start;
-        padding: 15px;
-    }
-
-    #contactanos-items h3 {
-        font-size: 25px;
-    }
-
-    iframe {
-        width: 35%;
-        height: 50vh;
-        margin-block: 0;
+        width: 80%;
     }
 }
 
 @media (min-width: 1200px) {
+
+    /* BASE */
     h2 {
         font-size: 45px;
+    }
+
+    /* HERO */
+    #redirect {
+        display: none;
+    }
+
+    /* QUE OFRECEMOS */
+    #que-ofrecemos {
+        margin-inline: 15px;
     }
 
     .section p {
@@ -748,6 +749,7 @@ footer h3 {
         width: 320px;
     }
 
+    /*JORNADAS*/
     #table {
         width: 75%;
         justify-self: center;
@@ -756,5 +758,10 @@ footer h3 {
     #table h3,
     #table p {
         font-size: 26px;
+    }
+
+    /* CONTACTO */
+    #items {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
