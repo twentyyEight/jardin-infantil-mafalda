@@ -14,7 +14,10 @@
 
 body {
     color: white;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Cause", cursive;
+    font-optical-sizing: auto;
+    display: grid;
+    gap: 4rem;
     overflow-x: hidden;
 }
 
@@ -26,11 +29,14 @@ h2 {
 
 h2 {
     color: black;
-    font-size: 35px;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    margin-top: 60px;
+}
+
+h3 {
+    font-size: 1.8rem;
 }
 
 a {
@@ -45,19 +51,20 @@ a {
 nav {
     position: absolute;
     z-index: 2;
-    width: 100vw;
+    width: 100%;
     display: none;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 ul {
-    width: 100vw;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 25px 10vw 0;
     padding-bottom: 15px;
-    border-bottom: 1.5px solid white;
+    width: 100%;
 }
 
 li a {
@@ -72,6 +79,12 @@ li a:hover {
     border-radius: 10px;
 }
 
+nav div {
+    width: 90%;
+    height: 1px;
+    background-color: white;
+}
+
 /* ================================
    HERO
 ================================ */
@@ -83,47 +96,40 @@ li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    box-sizing: border-box;
 }
 
 #hero div {
-    text-align: center;
-    padding-inline: 35px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
     align-items: center;
+    position: relative;
+    gap: 1rem;
+    text-align: center;
+    margin-inline: 1.5rem;
 }
 
 #hero img {
-    width: 75vw;
+    width: 75%;
 }
 
 #hero h1 {
-    font-size: 45px;
-    text-align: center;
+    font-size: 2.5rem;
     line-height: 1;
 }
 
 #hero h3 {
     font-family: "Playwrite US Modern", cursive;
     font-weight: 300;
-    font-size: 25px;
-    text-align: center;
     line-height: 1.2;
-    margin-top: 10px;
 }
 
 #redirect {
     background-color: var(--verde);
     font-weight: 700;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 8px;
     border-radius: 5px;
     width: fit-content;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 #redirect:hover,
@@ -139,284 +145,298 @@ li a:hover {
    QUÉ OFRECEMOS
 ================================ */
 
-#que-ofrecemos {
+#que-ofrecemos>div:first-of-type {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 30px;
+    padding-inline: 10%;
+    margin-top: 2.5rem;
+    gap: 2rem;
 }
 
-.container {
-    display: flex;
-    row-gap: 30px;
-    flex-direction: column;
-}
-
-.left {
-    order: 1;
-}
-
-.right {
-    order: 2;
-}
-
-.section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 5px;
-}
-
-.section img {
-    width: 35px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.section h3 {
-    font-size: 25px;
-}
-
-.section p {
-    color: #515050;
-    font-weight: 500;
+.seccion {
     text-align: center;
-    font-size: 20px;
-    margin-inline: 30px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border: 3px dashed;
 }
 
-.educacion img {
+.separador {
+    width: 20%;
+    height: 3.5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.seccion p {
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.seccion img {
+    width: 2.5rem;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.educacion {
+    background-color: #ffc6c6;
+    border-color: var(--rojo);
+    z-index: 3;
+}
+
+.educacion img,
+.educacion .separador {
     background-color: var(--rojo);
-}
-
-.alimentacion img {
-    background-color: var(--verde);
-}
-
-.after-school img {
-    background-color: var(--azul);
-}
-
-.celebraciones img {
-    background-color: var(--amarillo);
 }
 
 .educacion h3 {
     color: var(--rojo);
 }
 
+.alimentacion {
+    background-color: #fff2c2;
+    border-color: var(--amarillo);
+    z-index: 2;
+}
+
+.alimentacion img,
+.alimentacion .separador {
+    background-color: var(--amarillo);
+}
+
 .alimentacion h3 {
-    color: var(--verde);
-}
-
-.after-school h3 {
-    color: var(--azul);
-}
-
-.celebraciones h3 {
     color: var(--amarillo);
 }
 
-.mafalda-ofrecemos {
+.after-school {
+    background-color: #d9ffd1;
+    border-color: var(--verde);
+    z-index: 1;
+}
+
+.after-school img,
+.after-school .separador {
+    background-color: var(--verde);
+}
+
+.after-school h3 {
+    color: var(--verde);
+}
+
+.celebraciones {
+    background-color: #d0e9ff;
+    border-color: var(--azul);
+    z-index: 0;
+}
+
+.celebraciones img,
+.celebraciones .separador {
+    background-color: var(--azul);
+}
+
+.celebraciones h3 {
+    color: var(--azul);
+}
+
+#mafalda-bici,
+#mafalda-amigos {
+    justify-content: center;
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+#mafalda-bici {
     height: 40vh;
-    order: 3;
+    display: flex;
+}
+
+#mafalda-amigos {
+    display: none;
 }
 
 /* ================================
    NIVELES
 ================================ */
 
-#niveles {
+#niveles>div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     row-gap: 15px;
 }
 
-#niveles h3 {
-    font-size: 25px;
+.nivel {
+    position: relative;
 }
 
-#niveles p {
-    font-size: 20px;
-}
-
-.card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 1rem;
+.nivel div {
+    position: absolute;
     text-align: center;
-    padding: 40px;
-    width: 50vw;
-    outline: 3px dashed white;
-    outline-offset: -15px;
-    row-gap: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.card h3 {
-    line-height: 1;
+.nivel p:first-child {
+    font-weight: 700;
+    font-size: 2rem;
 }
 
-.medio {
-    background-color: var(--amarillo);
-}
-
-.menor {
-    background-color: var(--azul);
-}
-
-.mayor {
-    background-color: var(--rojo);
+.nivel p:nth-child(2) {
+    font-size: 1.8rem;
 }
 
 /* ================================
    JORNADAS
 ================================ */
-
-#jornadas {
+#tables {
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    row-gap: 20px;
+    gap: 1rem;
+    margin-inline: 2rem;
 }
 
-#table,
-#jornadas img {
-    width: 90%;
-}
-
-#table h3,
-#table div {
-    padding: 3px 10px;
-    border-radius: 5px;
-}
-
-#table div {
-    display: flex;
-    justify-content: space-between;
-    margin-block: 5px;
-    background-color: #49bb3531;
-}
-
-#table h3 {
-    background-color: #49BB35;
+.table h3,
+.table p {
     text-align: center;
-    font-size: 20px;
 }
 
-#table p {
+.table p {
+    font-size: 1.5rem;
+}
+
+.table h3,
+.table div {
+    border-radius: 5px;
+    padding-block: 5px;
+}
+
+.table div {
+    margin-top: 7px;
+    background-color: #befdb3;
+}
+
+.table h3 {
+    background-color: var(--verde);
+}
+
+.table p {
     color: black;
-    font-weight: 500;
-    font-size: 17px;
+}
+
+.table div p:nth-child(2) {
+    font-weight: 600;
 }
 
 #jornadas img {
+    width: 100%;
+    margin-top: 2rem;
     justify-self: end;
 }
+
 
 /* ================================
    CONTÁCTANOS
 ================================ */
 
-#contacto,
-#items,
-#items>* {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+#contacto>div {
+    margin-inline: 1.5rem;
 }
 
 #items {
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-#items>* {
+.item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 1rem;
     border-radius: 10px;
-    padding-block: 15px;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.423);
-    gap: 5px;
-    width: 290px;
 }
 
-#items img {
-    width: 30px;
+.item h3 {
+    font-size: 1.8rem;
 }
 
-#items h3 {
-    color: black;
-    font-size: 25px;
-}
-
-#items p {
-    color: #515050;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.fondo {
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-#ubicacion .fondo {
-    background-color: #ff2a2a37;
-}
-
-#horario .fondo {
-    background-color: #ffc80037;
-}
-
-#llamanos .fondo {
-    background-color: #1285e941;
-}
-
-#wsp .fondo {
-    background-color: #49bb3554;
-}
-
+.item p,
 .btn {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: 700;
+    font-size: 1.5rem;
 }
 
-#wsp .btn {
-    background-color: var(--verde);
+.ubicacion {
+    background-color: var(--rojo);
 }
 
-#wsp .btn:hover {
-    background-color: green;
+.ubicacion br {
+    display: none;
 }
 
-#llamanos .btn {
+.horario {
+    background-color: var(--amarillo);
+}
+
+.llamanos {
     background-color: var(--azul);
 }
 
-#llamanos .btn:active,
-#wsp .btn:active {
+.wsp {
+    background-color: var(--verde);
+}
+
+#items img {
+    width: 40px;
+    height: 40px;
+}
+
+.fondo {
+    padding: 12px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: white;
+    padding-block: 5px;
+    padding-inline: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-inline: 10px;
+}
+
+.btn:hover,
+.btn:active {
     text-decoration: underline;
 }
 
-#contacto h4 {
-    color: black;
-    font-family: "Playwrite US Modern", cursive;
-    font-size: 20px;
-    margin-top: 25px;
+.llamanos .btn {
+    color: var(--azul);
+}
+
+.wsp .btn {
+    color: var(--verde);
 }
 
 iframe {
     margin-block: 20px;
     border: 0;
-    width: 85%;
-    height: 80vw;
+    width: 100%;
+    height: 50vh;
     border-radius: 5px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.423);
-    margin-bottom: 80px;
 }
 
 /* ================================
@@ -447,11 +467,14 @@ footer img {
 }
 
 footer h3 {
-    font-size: 25px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-inline: 10px;
 }
 
+footer h3,
 footer p {
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 footer a {
@@ -464,120 +487,86 @@ footer a:hover {
     text-decoration: underline;
 }
 
-footer h3 {
-    text-align: center;
-    margin-bottom: 5px;
-    margin-inline: 10px;
-}
-
-#github-logo {
-    height: 20px;
-    margin-top: 3px;
-}
-
 /* ================================
    MEDIA QUERIES
 ================================ */
 
-@media (min-width: 379px) {
-
-    /* JORNADAS */
-    #table h3,
-    #table p {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 480px) {
+@media (min-width: 576px) {
 
     /* BASE */
     h2 {
-        font-size: 35px;
+        font-size: 2.5rem;
     }
-
-    /* QUE OFRECEMOS */
-    .section img {
-        width: 45px;
-    }
-
-    .section h3 {
-        font-size: 25px;
-    }
-
-    .section p {
-        font-size: 19px;
-        margin-inline: 50px;
-    }
-
-    /* NIVELES */
-    #niveles h3 {
-        font-size: 30px;
-    }
-
-    #niveles p {
-        font-size: 25px;
-    }
-
-    .card {
-        width: 250px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-    }
-
-    /* FOOTER */
-    footer h3,
-    footer a {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 768px) {
 
     /* HERO */
     #hero img {
-        width: 400px;
+        width: 350px;
     }
 
     #hero h1 {
-        font-size: 50px;
+        font-size: 3.5rem;
     }
 
-    #hero h3 {
-        font-size: 30px;
+    #hero a {
+        font-size: 1.7rem;
+    }
+
+    #mafalda-bici {
+        height: 30vh;
     }
 
     /* QUE OFRECEMOS */
-    .container {
-        flex-direction: row;
+    #que-ofrecemos>div:first-of-type {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 0;
+        margin-inline: 3rem;
+        align-items: stretch;
     }
 
-    .section p {
-        margin-inline: 35px;
+    .seccion {
+        padding-block: 2rem;
+        padding-inline: 1.5rem;
+    }
+
+    #mafalda-bici {
+        display: none;
+    }
+
+    #mafalda-amigos {
+        display: flex;
+    }
+
+    #mafalda-amigos img {
+        width: 32rem;
     }
 
     /* NIVELES */
-    #niveles {
-        flex-direction: row;
-        gap: 10px;
-        margin-inline: 30px;
-    }
-
-    .card {
-        width: 30vw;
-        height: 14vh;
-        display: flex;
-        justify-content: center;
+    #niveles p {
+        font-size: 2rem;
     }
 
     /* JORNADAS */
-    #table h3,
-    #table p {
-        font-size: 26px;
+    .table div {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 15px;
+    }
+
+    .table div p:nth-child(2) {
+        font-weight: normal;
+    }
+
+    .table h3,
+    .table p {
+        font-size: 1.7rem;
     }
 
     #jornadas img {
-        width: 60%;
+        width: 90%;
+        display: flex;
+        justify-content: end;
     }
 
     /* CONTACTO */
@@ -587,46 +576,99 @@ footer h3 {
     }
 
     #items>* {
-        height: 150px;
         justify-content: center;
+        width: 100%;
     }
 
-    #llamanos .btn {
+    #items img {
+        width: 35px;
+        height: fit-content;
+    }
+
+    .llamanos a {
         display: none;
     }
 
     iframe {
-        height: 35vh;
-        width: 80%;
+        height: 40vh;
+    }
+
+    /* FOOTER */
+    footer h3,
+    footer p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* NAVBAR */
+    nav {
+        display: flex;
+    }
+
+    /* HERO */
+    #hero h3 {
+        font-size: 30px;
+    }
+
+    #redirect {
+        display: none;
+    }
+
+    /* QUE OFRECEMOS */
+    .container {
+        flex-direction: row;
+    }
+
+    .seccion p {
+        margin-inline: 35px;
+    }
+
+    #mafalda-amigos img {
+        width: 40rem;
+    }
+
+    /* NIVELES */
+    #medio-menor {
+        display: flex;
+    }
+
+    /* JORNADAS */
+    #tables {
+        margin-inline: 9rem;
+    }
+
+    #jornadas img {
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    /* CONTACTO */
+    #contacto>div {
+        margin-inline: 5rem;
     }
 
     /* FOOTER */
     footer div {
+        gap: 30px;
         flex-direction: row;
-        gap: 20px;
     }
 
     footer h3,
-    footer a {
-        font-size: 20px;
+    footer p {
+        font-size: 1.5rem;
     }
 
     footer img {
         height: 18px;
     }
 
-    #github-logo {
-        height: 25px;
-    }
-
 }
 
 @media (min-width: 1024px) {
-
-    /* NAVBAR */
-    nav {
-        display: flex;
-    }
 
     /* HERO */
     #hero img {
@@ -641,83 +683,64 @@ footer h3 {
         font-size: 35px;
     }
 
-    /* QUE OFRECEMOS */
-    #que-ofrecemos {
+    /* NIVELES */
+    #niveles>div {
         flex-direction: row;
     }
 
-    .container {
-        flex-direction: column;
-        row-gap: 20px;
-        margin-inline: 45px;
-    }
-
-    .section p {
-        margin-inline: 0;
-        font-size: 20px;
-    }
-
-    .left {
-        order: 1;
-    }
-
-    .right {
-        order: 3;
-    }
-
-    .mafalda-ofrecemos {
-        order: 2;
-        height: 50vh;
-    }
-
-    .educacion,
-    .alimentacion {
-        align-items: end;
-    }
-
-    .after-school,
-    .celebraciones {
-        align-items: start;
-    }
-
-    .educacion p,
-    .alimentacion p {
-        text-align: end;
-    }
-
-    .after-school p,
-    .celebraciones p {
-        text-align: start;
-    }
-
-    /* NIVELES */
-    #niveles {
-        margin-inline: 50px;
-        justify-content: center;
-    }
-
-    #niveles h3 {
-        font-size: 33px;
-    }
-
-    #niveles p {
-        font-size: 27px;
-    }
-
     /* JORNADAS */
-    #jornadas {
+    #jornadas>div {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        align-items: center;
     }
 
-    #table h3,
-    #table p {
-        font-size: 26px;
+    #tables {
+        margin-right: 0.5rem;
+        margin-left: 1.5rem;
     }
 
     #jornadas img {
-        width: 80%;
+        width: 100%;
+        margin-top: 0;
     }
+
+    /* CONTACTANOS */
+    #contacto>div {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    #contacto iframe {
+        width: 35vw;
+        margin: 0;
+        height: auto;
+    }
+
+    .ubicacion br {
+        display: block;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer div {
+        flex-direction: row;
+        align-items: start;
+        margin: 0;
+        gap: 20px;
+    }
+
+    footer div div {
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -727,41 +750,32 @@ footer h3 {
         font-size: 45px;
     }
 
-    /* HERO */
-    #redirect {
-        display: none;
-    }
-
     /* QUE OFRECEMOS */
-    #que-ofrecemos {
-        margin-inline: 15px;
+    #que-ofrecemos>div:first-of-type {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    .section p {
-        font-size: 21px;
+    .seccion {
+        padding-inline: 0;
     }
 
-    .section h3 {
-        font-size: 27px;
+    #mafalda-amigos img {
+        width: 50rem;
     }
 
-    .card {
-        width: 320px;
+    /* JORNADAS */
+    #tables {
+        margin-inline: 3rem;
+        gap: 0rem;
     }
 
-    /*JORNADAS*/
-    #table {
-        width: 75%;
-        justify-self: center;
+    .table h3,
+    .table p {
+        font-size: 1.8rem;
     }
 
-    #table h3,
-    #table p {
-        font-size: 26px;
-    }
-
-    /* CONTACTO */
-    #items {
-        grid-template-columns: repeat(4, 1fr);
+    /* CONTACTANOS */
+    #contacto>div iframe {
+        width: 40vw;
     }
 }
