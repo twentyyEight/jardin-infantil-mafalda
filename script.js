@@ -1,4 +1,4 @@
-import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm"
+import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@12.39.0/+esm"
 
 /* ------------------- NAVBAR ------------------- */
 
@@ -31,7 +31,7 @@ animate("#hero h1",
 )
 
 // Subtitulo
-animate("#hero h3",
+animate("#hero h2",
     { clipPath: ["inset(0 100% 0 0)", "inset(0 0% 0 0)"] },
     { duration: 0.3, delay: 1 }
 )
