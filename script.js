@@ -161,30 +161,28 @@ if (window.innerWidth >= 1200) {
 // Tabla
 const jornadas = document.querySelectorAll('.table h3')
 const horarios = document.querySelectorAll('.table div')
-const jornadas_img = document.querySelector('#jornadas img')
 
-animate(jornadas_img, { opacity: 0 }, { duration: 0 })
+animate('#tables', { opacity: 0 }, { duration: 0 })
+animate('#jornadas img', { opacity: 0 }, { duration: 0 })
 
 if (window.innerWidth < 1024) {
 
-    animate(jornadas, { opacity: 0 }, { duration: 0 })
-    animate(horarios, { opacity: 0 }, { duration: 0 })
-
-    inView('#jornadas', () => {
+    inView('#tables', () => {
+        animate('#tables', { opacity: 1 }, { duration: 0 })
         animate(jornadas, { x: ['-50vw', 0], opacity: [0, 1] }, { duration: 1 })
         animate(horarios, { x: ['50vw', 0], opacity: [0, 1] }, { duration: 1 })
     }, { amount: 0.3 })
 
-    inView(jornadas_img, () => animate(jornadas_img, { opacity: [0, 1] }, { duration: 2 }))
+    inView('#jornadas img', () => animate('#jornadas img', { opacity: [0, 1] }, { duration: 2 }))
 
 } else {
 
-    inView('#jornadas', () => {
-        animate([jornadas, horarios], { opacity: 1 }, { duration: 0 })
+    inView('#tables', () => {
+        animate('#tables', { opacity: 1 }, { duration: 0 })
         animate('#tables', { x: ['-50vw', 0] }, { duration: 1 })
     }, { amount: 0.3 })
 
-    inView(jornadas_img, () => animate(jornadas_img, { x: ['50vw', 0], opacity: [0, 1] }, { duration: 1 }))
+    inView('#jornadas img', () => animate('#jornadas img', { x: ['50vw', 0], opacity: [0, 1] }, { duration: 1 }))
 }
 
 
