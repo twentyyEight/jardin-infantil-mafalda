@@ -32,7 +32,6 @@
 }
 
 body {
-    color: #fff;
     font-family: "Cause", cursive;
     font-optical-sizing: auto;
     overflow-x: hidden
@@ -52,8 +51,7 @@ h2 {
 h2 {
     color: #000;
     font-size: 2.5rem;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 20px
 }
 
@@ -63,7 +61,10 @@ h3 {
 
 a {
     text-decoration: none;
-    color: #fff
+}
+
+body, a {
+    color: #fff;
 }
 
 /* ================================
@@ -86,7 +87,6 @@ nav {
 
 #hero div {
     align-items: center;
-    position: relative;
     gap: 1rem;
     text-align: center;
     margin-inline: 1.5rem;
