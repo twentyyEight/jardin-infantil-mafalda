@@ -118,8 +118,7 @@ nav {
         border-radius: 10px;
     }
 
-    li a,
-    li a:hover {
+    li a {
         padding: 5px;
     }
 
@@ -193,7 +192,6 @@ nav {
 
     #hero img {
         width: 20rem;
-        height: auto;
     }
 
     #hero h1 {
@@ -209,7 +207,6 @@ nav {
 
     #hero img {
         width: 35vw;
-        height: auto;
     }
 
     #hero a {
@@ -221,7 +218,6 @@ nav {
 
     #hero img {
         width: 25vw;
-        height: auto;
     }
 
     #hero h1 {
@@ -328,7 +324,7 @@ nav {
     padding: 1.5rem;
     border-radius: 5px;
     gap: 8px;
-    border: 3px dashed;
+    border: 3px dashed var(--acento);
 }
 
 #secciones,
@@ -363,63 +359,36 @@ nav {
 }
 
 .educacion {
+    --acento: var(--rojo);
     background-color: #ffc6c6;
-    border-color: var(--rojo);
     z-index: 3;
 }
 
-.educacion img,
-.educacion h3::after {
-    background-color: var(--rojo);
-}
-
-.educacion h3 {
-    color: var(--rojo);
-}
-
 .alimentacion {
+    --acento: var(--amarillo);
     background-color: #fff2c2;
-    border-color: var(--amarillo);
     z-index: 2;
 }
 
-.alimentacion img,
-.alimentacion h3::after {
-    background-color: var(--amarillo);
-}
-
-.alimentacion h3 {
-    color: var(--amarillo);
-}
-
 .after-school {
+    --acento: var(--verde);
     background-color: #d9ffd1;
-    border-color: var(--verde);
     z-index: 1;
 }
 
-.after-school img,
-.after-school h3::after {
-    background-color: var(--verde);
-}
-
-.after-school h3 {
-    color: var(--verde);
-}
-
 .celebraciones {
+    --acento: var(--azul);
     background-color: #d0e9ff;
-    border-color: var(--azul);
     z-index: 0;
 }
 
-.celebraciones img,
-.celebraciones h3::after {
-    background-color: var(--azul);
+.seccion img,
+.seccion h3::after {
+    background-color: var(--acento);
 }
 
-.celebraciones h3 {
-    color: var(--azul);
+.seccion h3 {
+    color: var(--acento);
 }
 
 #bici,
@@ -431,7 +400,6 @@ nav {
 #bici {
     display: flex;
     height: 30vh;
-    width: auto;
 }
 
 #amigos {
@@ -451,7 +419,6 @@ nav {
 
     .seccion {
         padding-block: 2rem;
-        padding-inline: 1.5rem;
     }
 
     #bici {
@@ -473,7 +440,6 @@ nav {
 
     #amigos {
         width: 70%;
-        height: auto;
     }
 }
 
@@ -500,7 +466,6 @@ nav {
 
     #amigos {
         width: 50%;
-        height: auto;
     }
 }
 
@@ -604,6 +569,7 @@ nav {
 
 .table p {
     font-size: 1.5rem;
+    color: #000;
 }
 
 .table h3,
@@ -619,10 +585,6 @@ nav {
 
 .table h3 {
     background-color: var(--verde);
-}
-
-.table p {
-    color: #000;
 }
 
 .table div p:nth-child(2) {
@@ -701,7 +663,7 @@ nav {
 
     #tables {
         margin-inline: 3rem;
-        gap: 0rem;
+        gap: 0;
     }
 }
 
@@ -718,8 +680,7 @@ nav {
 
 .item {
     align-items: center;
-    padding-block: 1rem;
-    padding-inline: 0.5rem;
+    padding: 1rem 0.5rem;
     border-radius: 10px;
     text-align: center;
 }
@@ -735,10 +696,6 @@ nav {
     margin-bottom: 0.5rem;
     width: 3rem;
     height: 3rem;
-}
-
-.item h3 {
-    font-size: 1.8rem;
 }
 
 .item p {
@@ -789,7 +746,7 @@ iframe {
     width: 100%;
     height: 50vh;
     border-radius: 5px;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.423);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.423);
 }
 
 @media (min-width: 576px) {
@@ -797,8 +754,7 @@ iframe {
     #items {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        row-gap: 1rem;
+        gap: 1rem 2rem;
     }
 
     #items>* {
@@ -889,8 +845,7 @@ footer ul {
 footer ul li {
     display: flex;
     font-size: 1.1rem;
-    margin-inline: 1rem;
-    margin-block: 1rem;
+    margin: 1rem;
     gap: 5px;
 }
 
