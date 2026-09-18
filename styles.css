@@ -1,0 +1,949 @@
+/* ================================
+   FONTS
+================================ */
+
+@font-face {
+    font-family: 'Cause';
+    src: url('/fonts/Cause-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playwrite US Modern';
+    src: url(/fonts/PlaywriteUSModern-Thin.woff2) format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playpen Sans';
+    src: url('/fonts/PlaypenSans-SemiBold.woff2') format('woff2');
+    font-display: swap;
+}
+
+/* ================================
+   VARIABLES
+================================ */
+:root {
+    --rojo: #FF2A2A;
+    --amarillo: #ffc800;
+    --verde: #49BB35;
+    --azul: #1286E9
+}
+
+/* ================================
+   RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Cause", cursive;
+    font-optical-sizing: auto;
+    overflow-x: hidden
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+h1,
+h2 {
+    font-family: "Playpen Sans", cursive
+}
+
+h2 {
+    color: #000;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+h3 {
+    font-size: 1.8rem
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+a {
+    color: #fff;
+}
+
+@media (min-width: 1024px) {
+
+    h2 {
+        font-size: clamp(2.8rem, 2.6vw, 3rem);
+    }
+}
+
+/* ================================
+   NAVBAR
+================================ */
+nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    nav {
+        position: absolute;
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+        font-size: clamp(1.2rem, 1.8vw, 2.2rem);
+    }
+
+    ul {
+        list-style: none;
+        justify-content: space-around;
+        margin: 25px 10vw 0;
+        padding-bottom: 15px;
+    }
+
+    nav,
+    ul {
+        display: flex;
+        width: 100%;
+    }
+
+    li a:hover {
+        background-color: #ffffff34;
+        border-radius: 10px;
+    }
+
+    li a,
+    li a:hover {
+        padding: 5px;
+    }
+
+    nav::after {
+        content: '';
+        width: 90%;
+        height: 1px;
+        background-color: #fff;
+    }
+}
+
+/* ================================
+   HERO
+================================ */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/assets/hero/reja-jardin-infantil-mafalda.webp") center/cover;
+}
+
+#hero img {
+    width: 16rem;
+    height: auto;
+    min-width: 250px;
+    min-height: auto;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+#hero h2 {
+    font-family: "Playwrite US Modern", cursive;
+    line-height: 1.2;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+#hero h1,
+#hero h2 {
+    margin-inline: 0.5rem;
+}
+
+#hero a {
+    background-color: var(--verde);
+    font-weight: 800;
+    padding: 8px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #0b4a00;
+}
+
+#hero a:active,
+#hero a:hover {
+    background-color: #008000;
+}
+
+#hero a:active {
+    text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+
+    #hero img {
+        width: 20rem;
+        height: auto;
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+    #hero br {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #hero img {
+        width: 35vw;
+        height: auto;
+    }
+
+    #hero a {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #hero img {
+        width: 25vw;
+        height: auto;
+    }
+
+    #hero h1 {
+        font-size: 4.6rem;
+    }
+
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ================================
+   ABOUT
+================================ */
+#nosotras h2 {
+    margin-inline: 1rem;
+    line-height: 1.2;
+}
+
+#nosotras p {
+    color: #000;
+    font-size: 1.4rem;
+    margin-inline: 1.8rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#nosotras img {
+    display: flex;
+    width: 80%;
+    height: fit-content;
+    margin-top: 30px;
+    margin-inline: auto;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+
+    #nosotras {
+        display: flex;
+        margin-inline: 2rem;
+        gap: 2rem;
+    }
+
+    #nosotras h2,
+    #nosotras p {
+        text-align: left;
+    }
+
+    #nosotras p {
+        margin-inline: 0;
+    }
+
+    #nosotras img {
+        width: 45vw;
+        height: auto;
+        margin-block: auto;
+        margin-inline: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #nosotras {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nosotras div {
+        width: 50%;
+    }
+
+    #nosotras p {
+        font-size: clamp(1.5rem, 1.6vw, 1.8rem);
+    }
+
+    #nosotras img {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    #nosotras div {
+        width: 40%;
+    }
+
+    #nosotras img {
+        width: 30%;
+    }
+}
+
+/* ================================
+   SERVICES
+================================ */
+#secciones {
+    padding-inline: 10%;
+    margin-block: 2.5rem;
+    gap: 2rem;
+}
+
+.seccion {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 5px;
+    gap: 8px;
+    border: 3px dashed;
+}
+
+#secciones,
+.seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion h3::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 3.5px;
+    border-radius: 10px;
+    margin-inline: auto;
+    margin-block: 5px;
+}
+
+.seccion p {
+    color: #000;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.seccion img {
+    min-width: 45px;
+    width: 45px;
+    height: 45px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.educacion {
+    background-color: #ffc6c6;
+    border-color: var(--rojo);
+    z-index: 3;
+}
+
+.educacion img,
+.educacion h3::after {
+    background-color: var(--rojo);
+}
+
+.educacion h3 {
+    color: var(--rojo);
+}
+
+.alimentacion {
+    background-color: #fff2c2;
+    border-color: var(--amarillo);
+    z-index: 2;
+}
+
+.alimentacion img,
+.alimentacion h3::after {
+    background-color: var(--amarillo);
+}
+
+.alimentacion h3 {
+    color: var(--amarillo);
+}
+
+.after-school {
+    background-color: #d9ffd1;
+    border-color: var(--verde);
+    z-index: 1;
+}
+
+.after-school img,
+.after-school h3::after {
+    background-color: var(--verde);
+}
+
+.after-school h3 {
+    color: var(--verde);
+}
+
+.celebraciones {
+    background-color: #d0e9ff;
+    border-color: var(--azul);
+    z-index: 0;
+}
+
+.celebraciones img,
+.celebraciones h3::after {
+    background-color: var(--azul);
+}
+
+.celebraciones h3 {
+    color: var(--azul);
+}
+
+#bici,
+#amigos {
+    margin-inline: auto;
+    width: auto;
+}
+
+#bici {
+    display: flex;
+    height: 30vh;
+    width: auto;
+}
+
+#amigos {
+    display: none;
+}
+
+@media (min-width: 576px) {
+
+    #secciones {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 0;
+        margin-inline: 3rem;
+        align-items: stretch;
+    }
+
+    .seccion {
+        padding-block: 2rem;
+        padding-inline: 1.5rem;
+    }
+
+    #bici {
+        display: none;
+    }
+
+    #amigos {
+        display: flex;
+        width: 90vw;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .seccion p {
+        margin-inline: 35px;
+    }
+
+    #amigos {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .seccion h3 {
+        font-size: clamp(1.9rem, 2vw, 2.2rem);
+    }
+
+    .seccion p {
+        font-size: clamp(1.4rem, 1.5vw, 1.7rem);
+    }
+}
+
+@media (min-width: 1280px) {
+
+    #secciones {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .seccion {
+        padding-inline: 0;
+    }
+
+    #amigos {
+        width: 50%;
+        height: auto;
+    }
+}
+
+/* ================================
+   LEVELS
+================================ */
+#niveles>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    row-gap: 15px;
+}
+
+.nivel {
+    position: relative;
+}
+
+.nivel svg {
+    display: block;
+    width: 90vw;
+    height: auto;
+}
+
+.nivel div {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nivel p:first-child {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.nivel p:nth-child(2) {
+    font-size: 1.8rem;
+}
+
+@media (min-width: 576px) {
+
+    .nivel svg {
+        width: 60vw;
+    }
+
+    .nivel p:first-child {
+        font-size: 2.5rem;
+    }
+
+    .nivel p:nth-child(2) {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .nivel svg {
+        width: 40vw;
+    }
+
+    #medio-menor {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .nivel svg {
+        width: 25vw;
+    }
+
+    #niveles>div {
+        flex-direction: row;
+    }
+
+    .nivel p:first-child {
+        font-size: clamp(2.5rem, 2.5vw, 3rem);
+    }
+
+    .nivel p:nth-child(2) {
+        font-size: clamp(2rem, 2vw, 2.5rem);
+    }
+}
+
+/* ================================
+   SCHEDULE
+================================ */
+#tables {
+    display: grid;
+    gap: 1rem;
+    margin-inline: 2rem;
+}
+
+.table h3,
+.table p {
+    text-align: center;
+}
+
+.table p {
+    font-size: 1.5rem;
+}
+
+.table h3,
+.table div {
+    border-radius: 5px;
+    padding-block: 5px;
+}
+
+.table div {
+    margin-top: 7px;
+    background-color: #befdb3;
+}
+
+.table h3 {
+    background-color: var(--verde);
+}
+
+.table p {
+    color: #000;
+}
+
+.table div p:nth-child(2) {
+    font-weight: 600;
+}
+
+#jornadas img {
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    justify-self: end;
+}
+
+@media (min-width: 576px) {
+
+    .table div {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 15px;
+    }
+
+    .table div p:nth-child(2) {
+        font-weight: normal;
+    }
+
+    .table h3,
+    .table p {
+        font-size: 1.7rem;
+    }
+
+    #jornadas img {
+        width: 90%;
+        display: flex;
+        justify-content: end;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #tables {
+        margin-inline: 9rem;
+    }
+
+    #jornadas img {
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #jornadas>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #tables {
+        margin-right: 0.5rem;
+        margin-left: 1.5rem;
+    }
+
+    #jornadas img {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .table h3,
+    .table p {
+        font-size: clamp(1.8rem, 2vw, 2.3rem);
+    }
+}
+
+@media (min-width: 1280px) {
+
+    #tables {
+        margin-inline: 3rem;
+        gap: 0rem;
+    }
+}
+
+/* ================================
+   CONTACTO
+================================ */
+#contacto>div {
+    margin-inline: 1.5rem;
+}
+
+#items {
+    gap: 0.5rem;
+}
+
+.item {
+    align-items: center;
+    padding-block: 1rem;
+    padding-inline: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#items,
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item img {
+    filter: invert(1);
+    margin-bottom: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.item h3 {
+    font-size: 1.8rem;
+}
+
+.item p {
+    font-size: 1.3rem;
+}
+
+.ubicacion {
+    background-color: var(--rojo);
+}
+
+.horario {
+    background-color: var(--amarillo);
+}
+
+.llamanos {
+    background-color: var(--azul);
+}
+
+.wsp {
+    background-color: var(--verde);
+}
+
+.btn {
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-inline: 10px;
+    font-size: 1.2rem;
+}
+
+.btn:hover,
+.btn:active {
+    text-decoration: underline;
+}
+
+.llamanos .btn {
+    color: var(--azul);
+}
+
+.wsp .btn {
+    color: var(--verde);
+}
+
+iframe {
+    margin-block: 20px;
+    border: 0;
+    width: 100%;
+    height: 50vh;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.423);
+}
+
+@media (min-width: 576px) {
+
+    #items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        row-gap: 1rem;
+    }
+
+    #items>* {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #items img {
+        width: 35px;
+        height: fit-content;
+    }
+
+    .llamanos a {
+        display: none;
+    }
+
+    iframe {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #contacto>div {
+        margin-inline: 5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #items {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #contacto iframe {
+        margin-top: 1.5rem;
+        height: 50vh;
+    }
+
+    .ubicacion br {
+        display: block;
+    }
+
+    #items img {
+        width: clamp(2.5rem, 2.7vw, 3rem);
+    }
+
+    .item h3 {
+        font-size: clamp(2rem, 2vw, 2.5rem);
+    }
+
+    .item p,
+    .item a {
+        font-size: clamp(1.6rem, 1.6vw, 1.8rem);
+    }
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    background-color: #000;
+    padding-block: 2rem;
+}
+
+footer h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+footer h3 {
+    font-size: 1.1rem;
+    font-family: "Playwrite US Modern", cursive;
+    text-align: center;
+}
+
+footer ul {
+    margin-block: 2rem;
+}
+
+footer h2,
+footer ul {
+    color: #fff;
+}
+
+footer ul li {
+    display: flex;
+    font-size: 1.1rem;
+    margin-inline: 1rem;
+    margin-block: 1rem;
+    gap: 5px;
+}
+
+footer ul li img {
+    filter: invert(1);
+    height: 1.2rem;
+    width: fit-content;
+}
+
+footer p {
+    color: #adacac;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+
+    footer {
+        padding-inline: 2rem;
+    }
+
+    #container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer ul {
+        margin: 0;
+        width: fit-content;
+        flex-direction: column;
+    }
+
+    footer ul li {
+        margin-block: 0.5rem;
+    }
+
+    footer p,
+    footer h3 {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    footer h2 {
+        font-size: clamp(2rem, 2.2vw, 2.5rem);
+    }
+
+    footer h3 {
+        font-size: clamp(1.3rem, 1.2vw, 1.5rem);
+    }
+    
+    footer p,
+    footer ul li {
+        font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+    }
+}

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css"> <!-- CSS -->
+    <link rel="preload" href="/fonts/PlaypenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Cause-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/PlaywriteUSModern-Thin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./styles.css"> <!-- CSS -->
     <link rel="shortcut icon" href="assets/mafalda.ico"> <!-- Icono -->
 
     <title>Jardín Infantil Mafalda | Jardín Infantil en Recoleta</title>
@@ -15,49 +18,62 @@
     <meta name="description"
         content="Jardín infantil con más de 20 años de experiencia, ubicado en Recoleta a pasos del metro Dorsal. Tenemos jornada media y completa, almuerzo incluido.">
     <html lang="es">
+    
 </head>
 
 <body>
     <!-- NAVBAR-->
     <nav>
         <ul>
-            <li><a href="#que-ofrecemos">QUÉ OFRECEMOS</a></li>
+            <li><a href="#nosotras">QUIENES SOMOS</a></li>
+            <li><a href="#servicios">QUÉ OFRECEMOS</a></li>
             <li><a href="#niveles">NIVELES</a></li>
             <li><a href="#jornadas">JORNADAS</a></li>
             <li><a href="#contacto">CONTÁCTANOS</a></li>
         </ul>
-        <div id="navline"></div>
     </nav>
 
     <main>
         <!-- HERO -->
         <div id="hero">
+            <img src="assets/hero/mafalda-inicio.avif" alt="Mafalda y amigos" fetchpriority="high">
+            <h1>Jardín Infantil Mafalda</h1>
+            <h2>Matrículas abiertas <br /> todo el año</h2>
+            <a href="#contacto">Contáctanos</a>
+        </div>
+
+        <!-- QUIENES SOMOS -->
+        <div id="nosotras">
             <div>
-                <img src="assets/hero/mafalda-inicio.avif" alt="Mafalda y amigos" fetchpriority="high">
-                <h1>Jardín Infantil Mafalda</h1>
-                <h2>Más de 20 años de experiencia</h2>
-                <a href="#contacto">Contáctanos</a>
+                <h2>¿Quienes somos?</h2>
+                <p>Somos un jardín infantil particular y after school ubicado en la comuna de Recoleta, cerca del
+                    metro Dorsal, con más de 20
+                    años de
+                    experiencia
+                    entregando una educación de calidad a los más pequeños.</p>
+                <p> Cuidamos a niños de 2 a 6 años, acompañándolos en cada etapa de su desarrollo fomentando su
+                    curiosidad,
+                    autonomía y el amor
+                    por aprender, en un espacio donde se sientan valorados y acompañados.</p>
             </div>
+            <img src="assets/quienes/mafalda_amigos.avif" alt="Mafalda y sus amigos a color" fetchpriority="high">
         </div>
 
         <!-- QUE OFRECEMOS -->
-        <div id="que-ofrecemos">
+        <div id="servicios">
             <h2>Qué ofrecemos</h2>
 
-            <div>
-
+            <div id="secciones">
                 <div class="seccion educacion">
-                    <img src="assets/ofrecemos/libro.avif" alt="libro" loading="lazy">
+                    <img src="assets/ofrecemos/libro.webp" alt="libro" loading="lazy">
                     <h3>Educación Integral</h3>
-                    <div class="separador"></div>
                     <p>Nuestra educación estimula el desarrollo cognitivo, motriz y emocional, preparando a
                         los niños para el colegio.</p>
                 </div>
 
                 <div class="seccion alimentacion">
-                    <img src="assets/ofrecemos/manzana.avif" alt="manzana" loading="lazy">
+                    <img src="assets/ofrecemos/manzana.webp" alt="manzana" loading="lazy">
                     <h3>Alimentación</h3>
-                    <div class="separador"></div>
                     <p>
                         Entregamos una alimentación nutritiva, adaptada a las necesidades de cada niño y fomentando
                         hábitos saludables.
@@ -65,9 +81,8 @@
                 </div>
 
                 <div class="seccion after-school">
-                    <img src="assets/ofrecemos/mochila.avif" alt="mochila" loading="lazy">
+                    <img src="assets/ofrecemos/mochila.webp" alt="mochila" loading="lazy">
                     <h3>After School</h3>
-                    <div class="separador"></div>
                     <p>Entregamos acompañamiento y cuidado en las tardes, con actividades recreativas y
                         apoyo en
                         tareas.
@@ -75,9 +90,8 @@
                 </div>
 
                 <div class="seccion celebraciones">
-                    <img src="assets/ofrecemos/celebracion.avif" alt="serpentinas" loading="lazy">
+                    <img src="assets/ofrecemos/celebracion.webp" alt="serpentinas" loading="lazy">
                     <h3>Celebraciones</h3>
-                    <div class="separador"></div>
                     <p>
                         Festejamos fechas importantes como cumpleaños, día del padre, la madre y del niño,
                         fiestas
@@ -86,13 +100,9 @@
                 </div>
             </div>
 
-            <div id="mafalda-bici">
-                <img src="assets/ofrecemos/mafalda_bici.png" alt="mafalda en bici" loading="lazy">
-            </div>
+            <img src="assets/ofrecemos/mafalda_bici.webp" id="bici" alt="mafalda en bicicleta" loading="lazy">
 
-            <div id="mafalda-amigos">
-                <img src="assets/ofrecemos/mafalda_amigos.png" alt="mafalda y amigos" loading="lazy">
-            </div>
+            <img src="assets/ofrecemos/mafalda_amigos.webp" id="amigos" alt="mafalda y amigos" loading="lazy">
         </div>
 
         <!-- NIVELES -->
@@ -192,42 +202,26 @@
                 <div id="items">
 
                     <div class="item ubicacion">
-
-                        <div class="fondo">
-                            <img src="assets/contacto/ubicacion.png" alt="ubicacion" loading="lazy">
-                        </div>
-
+                        <img src="assets/contacto/ubicacion.webp" alt="ubicacion" loading="lazy">
                         <h3>Ubicación</h3>
-                        <p>Las Orquideas 3249, <br> Recoleta</p>
+                        <p>Las Orquideas 3249, <br>Recoleta</p>
                     </div>
 
                     <div class="item horario">
-
-                        <div class="fondo">
-                            <img src="assets/contacto/reloj.png" alt="reloj" loading="lazy">
-                        </div>
-
+                        <img src="assets/contacto/reloj.webp" alt="reloj" loading="lazy">
                         <h3>Horario de atención</h3>
                         <p class="dias horas">Lunes a Viernes <br> 8:00 a 17:30 hrs.</p>
                     </div>
 
                     <div class="item llamanos">
-
-                        <div class="fondo">
-                            <img src="assets/contacto/telefono.png" alt="telefono" loading="lazy">
-                        </div>
-
+                        <img src="assets/contacto/telefono.webp" alt="telefono" loading="lazy">
                         <h3>Llámanos</h3>
                         <p>+56 9 9435 6165</p>
                         <a href="tel:+56994356165" class="btn">Presiona aquí para llamar</a>
                     </div>
 
                     <div class="item wsp">
-
-                        <div class="fondo">
-                            <img src="assets/contacto/whatsapp.png" alt="whatsapp" loading="lazy">
-                        </div>
-
+                        <img src="assets/contacto/whatsapp.webp" alt="whatsapp" loading="lazy">
                         <h3>WhatsApp</h3>
                         <p>+56 9 9435 6165</p>
                         <a href="https://wa.me/56994356165" class="btn">Presiona aquí para chatear</a>
@@ -236,34 +230,41 @@
 
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.026121872372!2d-70.6406583!3d-33.3964827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c60bed951039%3A0xe24e0f3f43f5b8ca!2sJard%C3%ADn%20Infantil%20Mafalda!5e0!3m2!1ses-419!2scl!4v1759257116185!5m2!1ses-419!2scl"
-                    allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Jardín Infantil Mafalda"></iframe>
+                    allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Jardín Infantil Mafalda"></iframe>
             </div>
         </div>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <h3>Página desarrollada por Paloma Cabrillana</h3>
 
-        <div>
-            <p>Contáctala:</p>
-
+        <div id="container">
             <div>
-                <a href="tel:+56971067673">
-                    <img src="assets/footer/tel.png" alt="telefono" loading="lazy">
-                    <p>+56 9 7106 7673</p>
-                </a>
-
-                <a href="mailto:paloma.cabrillana@gmail.com">
-                    <img src="assets/footer/gmail.png" alt="gmail" loading="lazy">
-                    <p>paloma.cabrillana@gmail.com</p>
-                </a>
+                <h2>Jardín Infantil Mafalda</h2>
+                <h3>Más de 20 años de experiencia</h3>
             </div>
+
+            <ul>
+                <li>
+                    <img src="/assets/contacto/ubicacion.webp" alt="ubicacion">
+                    Las Orquideas 3249, Recoleta, Santiago
+                </li>
+                <li>
+                    <img src="/assets/contacto/telefono.webp" alt="teléfono">
+                    +56 9 9435 6165
+                </li>
+                <li>
+                    <img src="/assets/contacto/whatsapp.webp" alt="whatsapp">
+                    +56 9 9435 6165
+                </li>
+            </ul>
         </div>
 
+        <p>Página desarrollada por Paloma Cabrillana</p>
     </footer>
 
-    <script type="module" src="script.js"></script>
+
 </body>
 
 </html>
