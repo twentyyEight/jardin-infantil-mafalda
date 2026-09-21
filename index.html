@@ -5,245 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preload" as="image" href="/assets/hero/reja-jardin-infantil-mafalda.webp" fetchpriority="high">
-    
-    <style>
+    <link rel="preload" href="/fonts/Cause-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/PlaywriteUSModern-Thin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/PlaypenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 
-        /* FUENTES */
-        @font-face {
-            font-family: 'Cause';
-            src: url('/fonts/Cause-Regular.woff2') format('woff2');
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Playwrite US Modern';
-            src: url(/fonts/PlaywriteUSModern-Thin.woff2) format('woff2');
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Playpen Sans';
-            src: url('/fonts/PlaypenSans-SemiBold.woff2') format('woff2');
-            font-display: swap;
-        }
-
-        /* VARIABLES */ 
-        :root {
-            --rojo: #FF2A2A;
-            --amarillo: #ffc800;
-            --verde: #49BB35;
-            --azul: #1286E9
-        }
-
-        /* RESET */
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Cause", cursive;
-            font-optical-sizing: auto;
-            overflow-x: hidden
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-            margin-bottom: 6rem;
-        }
-
-        h1,
-        h2 {
-            font-family: "Playpen Sans", cursive
-        }
-
-        h2 {
-            color: #000;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 20px
-        }
-
-        h3 {
-            font-size: 1.8rem
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        body,
-        a {
-            color: #fff;
-        }
-
-        @media (min-width: 1024px) {
-
-            h2 {
-                font-size: clamp(2.8rem, 2.6vw, 3rem);
-            }
-        }
-
-        /* NAVBAR */
-        nav {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-
-            nav {
-                position: absolute;
-                z-index: 2;
-                flex-direction: column;
-                align-items: center;
-                font-size: clamp(1.2rem, 1.8vw, 2.2rem);
-            }
-
-            ul {
-                list-style: none;
-                justify-content: space-around;
-                margin: 25px 10vw 0;
-                padding-bottom: 15px;
-            }
-
-            nav,
-            ul {
-                display: flex;
-                width: 100%;
-            }
-
-            li a:hover {
-                background-color: #ffffff34;
-                border-radius: 10px;
-            }
-
-            li a {
-                padding: 5px;
-            }
-
-            nav::after {
-                content: '';
-                width: 90%;
-                height: 1px;
-                background-color: #fff;
-            }
-        }
-
-        /* HERO */
-        #hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            text-align: center;
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("/assets/hero/reja-jardin-infantil-mafalda.webp") center/cover;
-        }
-
-        #hero img {
-            width: 16rem;
-            height: auto;
-            min-width: 250px;
-            min-height: auto;
-        }
-
-        #hero h1 {
-            font-size: 3rem;
-            line-height: 1;
-        }
-
-        #hero h2 {
-            font-family: "Playwrite US Modern", cursive;
-            line-height: 1.2;
-            font-size: 1.7rem;
-            color: #fff;
-        }
-
-        #hero h1,
-        #hero h2 {
-            margin-inline: 0.5rem;
-        }
-
-        #hero a {
-            background-color: var(--verde);
-            font-weight: 800;
-            padding: 8px;
-            width: 150px;
-            border-radius: 5px;
-            font-size: 1.5rem;
-            color: #0b4a00;
-        }
-
-        #hero a:active,
-        #hero a:hover {
-            background-color: #008000;
-        }
-
-        #hero a:active {
-            text-decoration: underline;
-        }
-
-        @media (min-width: 576px) {
-
-            #hero img {
-                width: 20rem;
-            }
-
-            #hero h1 {
-                font-size: 3.5rem;
-            }
-
-            #hero br {
-                display: none;
-            }
-        }
-
-        @media (min-width: 768px) {
-
-            #hero img {
-                width: 35vw;
-            }
-
-            #hero a {
-                display: none;
-            }
-        }
-
-        @media (min-width: 1024px) {
-
-            #hero img {
-                width: 25vw;
-            }
-
-            #hero h1 {
-                font-size: 4.6rem;
-            }
-
-            #hero h2 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
-
-    <link rel="stylesheet" href="./styles.css" media="print" onload="this.onload=null;this.media='all'">
+    <link rel="stylesheet" href="./styles.css">
     <noscript>
         <link rel="stylesheet" href="./styles.css">
     </noscript>
     <link rel="shortcut icon" href="assets/mafalda.ico"> <!-- Icono -->
 
-    <title>Jardín Infantil Mafalda | Jardín Infantil en Recoleta</title>
+    <title>Jardín Infantil Mafalda | Jardín Infantil & After School en Recoleta</title>
 
     <meta name="author" content="Paloma Cabrillana">
 
     <meta name="description"
         content="Jardín infantil con más de 20 años de experiencia, ubicado en Recoleta a pasos del metro Dorsal. Tenemos jornada media y completa, almuerzo incluido.">
-
-    <meta name="google-site-verification" content="lBFY2OwF2RXG2GvYAZAtk6kCYjVSb4iX9ihS8lt6OFM" />
 
 </head>
 
@@ -416,7 +193,11 @@
                     </div>
                 </div>
 
-                <img src="assets/jornadas/mafalda-jornada.webp" alt="mafalda amigos" loading="lazy">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="assets/jornadas/mafalda-jornada-movil.avif"
+                        type="image/avif">
+                    <img src="assets/jornadas/mafalda-jornada-pc.webp" alt="Mafalda y sus amigos" loading="lazy">
+                </picture>
             </div>
         </div>
 

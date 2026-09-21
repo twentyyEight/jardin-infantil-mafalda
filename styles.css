@@ -1,3 +1,216 @@
+/* FUENTES */
+@font-face {
+    font-family: 'Cause';
+    src: url('/fonts/Cause-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playwrite US Modern';
+    src: url(/fonts/PlaywriteUSModern-Thin.woff2) format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playpen Sans';
+    src: url('/fonts/PlaypenSans-SemiBold.woff2') format('woff2');
+    font-display: swap;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Cause", cursive;
+    font-optical-sizing: auto;
+    overflow-x: hidden
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+h1,
+h2 {
+    font-family: "Playpen Sans", cursive
+}
+
+h2 {
+    color: #000;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+h3 {
+    font-size: 1.8rem
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+a {
+    color: #fff;
+}
+
+@media (min-width: 1024px) {
+
+    h2 {
+        font-size: clamp(2.8rem, 2.6vw, 3rem);
+    }
+}
+
+/* NAVBAR */
+nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    nav {
+        position: absolute;
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+        font-size: clamp(1.2rem, 1.8vw, 2.2rem);
+    }
+
+    ul {
+        list-style: none;
+        justify-content: space-around;
+        margin: 25px 10vw 0;
+        padding-bottom: 15px;
+    }
+
+    nav,
+    ul {
+        display: flex;
+        width: 100%;
+    }
+
+    li a:hover {
+        background-color: #ffffff34;
+        border-radius: 10px;
+    }
+
+    li a {
+        padding: 5px;
+    }
+
+    nav::after {
+        content: '';
+        width: 90%;
+        height: 1px;
+        background-color: #fff;
+    }
+}
+
+/* HERO */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/assets/hero/reja-jardin-infantil-mafalda.webp") center/cover;
+}
+
+#hero img {
+    width: 16rem;
+    height: fit-content;
+    min-width: 250px;
+    min-height: auto;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+#hero h2 {
+    font-family: "Playwrite US Modern", cursive;
+    line-height: 1.2;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+#hero h1,
+#hero h2 {
+    margin-inline: 0.5rem;
+}
+
+#hero a {
+    background-color: #49BB35;
+    font-weight: 800;
+    padding: 8px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #0b4a00;
+}
+
+#hero a:active,
+#hero a:hover {
+    background-color: #008000;
+}
+
+#hero a:active {
+    text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+
+    #hero img {
+        width: 20rem;
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+    #hero br {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #hero img {
+        width: 35vw;
+    }
+
+    #hero a {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #hero img {
+        width: 25vw;
+    }
+
+    #hero h1 {
+        font-size: 4.6rem;
+    }
+
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
 /* ================================
    ABOUT
 ================================ */
@@ -93,7 +306,8 @@
     padding: 1.5rem;
     border-radius: 5px;
     gap: 8px;
-    border: 3px dashed var(--acento);
+    border-width: 3px;
+    border-style: dashed;
 }
 
 #secciones,
@@ -128,42 +342,69 @@
 }
 
 .educacion {
-    --acento: var(--rojo);
+    border-color: #FF2A2A;
     background-color: #ffc6c6;
     z-index: 3;
 }
 
 .alimentacion {
-    --acento: var(--amarillo);
+    border-color: #ffc800;
     background-color: #fff2c2;
     z-index: 2;
 }
 
 .after-school {
-    --acento: var(--verde);
+    border-color: #49BB35;
     background-color: #d9ffd1;
     z-index: 1;
 }
 
 .celebraciones {
-    --acento: var(--azul);
+    border-color: #1286E9;
     background-color: #d0e9ff;
     z-index: 0;
 }
 
-.seccion img,
-.seccion h3::after {
-    background-color: var(--acento);
+.educacion img,
+.educacion h3::after {
+    background-color: #FF2A2A;
 }
 
-.seccion h3 {
-    color: var(--acento);
+.educacion h3 {
+    color: #FF2A2A;
+}
+
+.alimentacion img,
+.alimentacion h3::after {
+    background-color: #ffc800;
+}
+
+.alimentacion h3 {
+    color: #ffc800;
+}
+
+.after-school img,
+.after-school h3::after {
+    background-color: #49BB35;
+}
+
+.after-school h3 {
+    color: #49BB35;
+}
+
+.celebraciones img,
+.celebraciones h3::after {
+    background-color: #1286E9;
+}
+
+.celebraciones h3 {
+    color: #1286E9;
 }
 
 #bici,
 #amigos {
     margin-inline: auto;
-    width: auto;
+    width: fit-content;
 }
 
 #bici {
@@ -353,7 +594,7 @@
 }
 
 .table h3 {
-    background-color: var(--verde);
+    background-color: #49BB35;
 }
 
 .table div p:nth-child(2) {
@@ -472,19 +713,19 @@
 }
 
 .ubicacion {
-    background-color: var(--rojo);
+    background-color: #FF2A2A;
 }
 
 .horario {
-    background-color: var(--amarillo);
+    background-color: #ffc800;
 }
 
 .llamanos {
-    background-color: var(--azul);
+    background-color: #1286E9;
 }
 
 .wsp {
-    background-color: var(--verde);
+    background-color: #49BB35;
 }
 
 .btn {
@@ -502,11 +743,11 @@
 }
 
 .llamanos .btn {
-    color: var(--azul);
+    color: #1286E9;
 }
 
 .wsp .btn {
-    color: var(--verde);
+    color: #49BB35;
 }
 
 iframe {
@@ -665,7 +906,7 @@ footer p {
     footer h3 {
         font-size: clamp(1.3rem, 1.2vw, 1.5rem);
     }
-    
+
     footer p,
     footer ul li {
         font-size: clamp(1.2rem, 1.2vw, 1.5rem);
